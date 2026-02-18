@@ -23,7 +23,20 @@ solve-everything/
 
 ## Install
 
-### Claude Code
+### Claude Desktop & Cowork (No Terminal Required)
+
+You can add this skill directly through the Claude interface:
+
+1. Download the [skill zip file](https://github.com/interplanetarychris/solve-everything/releases) from the latest release
+2. Open Claude and go to **Settings > Capabilities**
+3. Scroll to the **Skills** section and click **Upload skill**
+4. Select the downloaded zip file
+
+The skill will appear in your Skills list and Claude will automatically activate it when your conversation involves strategic analysis, moonshots, or abundance frameworks.
+
+> **Note:** Custom skills are private to your account. Code execution must be enabled in Settings > Capabilities.
+
+### Claude Code (CLI)
 
 ```bash
 # Personal (available in all your projects)
