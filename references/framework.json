@@ -1,0 +1,1733 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "meta": {
+    "title": "Solve Everything: Achieving Abundance by 2035",
+    "subtitle": "A Blueprint for the Next Decade",
+    "authors": [
+      "Dr. Alexander D. Wissner-Gross",
+      "Dr. Peter H. Diamandis"
+    ],
+    "source_url": "https://www.solveeverything.org/",
+    "copyright": "Copyright © 2026 Dr. Alexander D. Wissner-Gross. All Rights Reserved. Portions of Chapter 7 are Copyright © Dr. Peter H. Diamandis and used under license.",
+    "version": "1.0.0",
+    "generated": "2026-02-18",
+    "description": "A structured, agent-parsable representation of the Solve Everything framework. This single file contains both the machine-readable schema (glossary, structures, relationships) and the narrative companion (chapter summaries, usage guide, pattern/anti-pattern reference). Designed as a complement to the narrative web page at solveeverything.org.",
+    "usage_note": "This resource is faithful to the source text and intended for educational and analytical use. It does not replace the full narrative, which provides essential context, historical grounding, and rhetorical argumentation. See the companion Markdown file for chapter summaries.",
+    "format_note": "This is the consolidated single-file version. The 'companion' section contains narrative content that would typically be in a separate Markdown file. All structured data is in the top-level sections. For human reading, render the companion.chapter_summaries values as Markdown."
+  },
+  "core_thesis": {
+    "summary": "When we deliberately route large-scale artificial intelligence toward Positive-Sum Moonshots and measure progress against rigorous, adversarially-tested standards, entire domains are solved in bulk and problems become compute-bound.",
+    "three_claims": [
+      {
+        "id": "claim_1",
+        "label": "Cognition is a Commodity",
+        "statement": "Between 2026 and 2030, model quality, collapsing unit cost, and falling integration friction converge to make super-human thought cheap and accessible as a utility. The bottleneck shifts from human brainpower to routing: deciding where to point the firehose of intelligence.",
+        "drivers": [
+          "Model quality rocketing past human limits",
+          "Unit cost of cognition collapsing toward the physical floor (electricity cost per transistor flip)",
+          "Friction of integration falling to zero (agents executing in the real world)"
+        ]
+      },
+      {
+        "id": "claim_2",
+        "label": "Targeting Systems Industrialize Progress",
+        "statement": "A field allows for industrial-scale progress only when we can state with mathematical precision what success looks like. Targeting Systems are not passive scoreboards; they are active guidance mechanisms that create the future by making measurement legible, adversarial, and payable.",
+        "mechanism": "When you measure something and offer a reward for it, capital and research flood into that area. The moment a government places money in escrow tied to Target X, a flywheel of progress ignites."
+      },
+      {
+        "id": "claim_3",
+        "label": "The Shaped-Charge Model",
+        "statement": "ASI must be focused by routing it through Moonshots: massive missions validated by strict, adversarially-tested targets. A Moonshot must be Positive-Sum, Auditable, and Composable. When intelligence flows through these channels, safety improves organically because every step is measured against guardrails.",
+        "moonshot_criteria": {
+          "positive_sum": "Increases the size of the pie for everyone rather than fighting over a fixed pie",
+          "auditable": "Performance verified by independent, automated tests",
+          "composable": "Pieces are open and verified, allowing others to build on top like LEGO bricks"
+        }
+      }
+    ],
+    "enemy": {
+      "id": "the_muddle",
+      "label": "The Muddle",
+      "definition": "The entrenched layer of bureaucracy, input-based pricing, and scarcity-minded institutions that currently hinders progress and efficiency.",
+      "how_it_wins": "If The Muddle throttles ASI with red tape, we lose the century.",
+      "antidote": "Build the targeting systems and outcome-based rails fast enough to route around it."
+    },
+    "definition_of_solved": {
+      "theoretical": "A domain is solved when the main bottleneck shifts from human genius to available computing power.",
+      "operational": "A domain is solved when tasks can be automated to beat human experts reliably, with transparent failure modes."
+    }
+  },
+  "industrial_intelligence_stack": {
+    "description": "The layered infrastructure required to turn a craft into an industry. If a layer is missing, the system will fail.",
+    "analogy": "Just as we could not industrialize air travel until we understood the physics of lift and drag, we cannot industrialize a domain until its foundations are solid.",
+    "layers": [
+      {
+        "position": 1,
+        "id": "purpose",
+        "label": "Purpose and Payoff (The Goal)",
+        "description": "Move beyond vague mission statements to quantifiable metrics (e.g., 'reduce sepsis rates by 50%')."
+      },
+      {
+        "position": 2,
+        "id": "task_taxonomy",
+        "label": "Task Taxonomy (The Map)",
+        "description": "Break the complex job into tiny, measurable actions. The assembly line instruction manual for cognitive work."
+      },
+      {
+        "position": 3,
+        "id": "observability",
+        "label": "Observability (The Eyes)",
+        "description": "Sensors, logs, and data streams that act as the system's nervous system. You cannot fix what you cannot see."
+      },
+      {
+        "position": 4,
+        "id": "targeting_system",
+        "label": "The Targeting System (The Harness)",
+        "description": "The engine of the stack. A collection of difficult tests an AI model must pass. Acts as quality control, actively trying to break new models to ensure they work."
+      },
+      {
+        "position": 5,
+        "id": "model_layer",
+        "label": "The Model Layer (The Brain)",
+        "description": "The AI agent itself, the software making the decisions, trained against the Harness."
+      },
+      {
+        "position": 6,
+        "id": "actuation",
+        "label": "Actuation (The Hands)",
+        "description": "Decisions affect the world via robotic arm, API, smart contract, or other mechanism."
+      },
+      {
+        "position": 7,
+        "id": "verification",
+        "label": "Verification and Red Teaming (The Immune System)",
+        "description": "Continuous, independent attacks on the system to find flaws before they cause damage."
+      },
+      {
+        "position": 8,
+        "id": "governance",
+        "label": "Governance and Incentives (The Rules)",
+        "description": "Realign money from paying for 'hours worked' to 'pay-for-performance' contracts."
+      },
+      {
+        "position": 9,
+        "id": "distribution",
+        "label": "Distribution and Maintenance (The Scale)",
+        "description": "Ensuring the system works as a reliable utility like the power grid, not a one-off science project."
+      }
+    ]
+  },
+  "maturation_curve": {
+    "description": "As intelligence, data, and capital are poured into any specific field, it evolves through five predictable stages of maturity. This progression is a ladder that every industry climbs.",
+    "levels": [
+      {
+        "id": "L0",
+        "label": "The Ill-Posed Domain ('The Muddle')",
+        "state": "Ambiguity. Objectives contested, data messy or non-existent, decisions driven by anecdote or gut feeling.",
+        "human_role": "Humans do everything, relying on intuition and politics.",
+        "ai_role": "Non-existent. AI cannot learn because there is no clear target.",
+        "example": "Corporate Strategy — decisions based on who makes the most persuasive PowerPoint, not rigorous data."
+      },
+      {
+        "id": "L1",
+        "label": "The Measurable Domain",
+        "state": "Scoreboards. We may not know how to solve perfectly, but we have agreed on what we are measuring.",
+        "human_role": "Humans still do the work but are now being graded.",
+        "ai_role": "Referee or scorekeeper, collecting data and showing baseline performance.",
+        "example": "Sales Call Tracking — we measure conversion rates, know which humans close deals."
+      },
+      {
+        "id": "L2",
+        "label": "The Repeatable Domain",
+        "state": "Playbooks. Best performers identify patterns and write SOPs. The process is manual but consistent.",
+        "human_role": "Humans follow a strict script or checklist.",
+        "ai_role": "Assists by offering templates or auto-completing simple steps.",
+        "example": "Commercial Flight — rigorous pre-flight checklists, highly standardized safety."
+      },
+      {
+        "id": "L3",
+        "label": "The Automated Domain",
+        "state": "The critical inflection point. Checklists from L2 become code. AI agents execute the majority of primitive tasks.",
+        "human_role": "Manager and exception-handler, stepping in only when the AI gets confused.",
+        "ai_role": "Primary worker for ~80% of volume.",
+        "example": "Modern Call Centers — chatbot solves easy problems, routes complex ones to a human."
+      },
+      {
+        "id": "L4",
+        "label": "The Industrialized Domain",
+        "state": "The economic flip. Buyers stop hiring humans entirely for the task. They buy verified outcomes from a system.",
+        "human_role": "Auditors and system architects ensuring the machine runs safely.",
+        "ai_role": "Runs the show at speed and cost humans cannot match.",
+        "example": "Factory Assembly Lines — we buy the outcome (a working car), not hours of hammering metal."
+      },
+      {
+        "id": "L5",
+        "label": "The Commoditized Domain ('Solved')",
+        "state": "Compute-Bound. The problem is solved. Multiple providers compete purely on price. Service is boring and reliable as tap water.",
+        "human_role": "The consumer. We simply use the output without thinking about how it was made.",
+        "ai_role": "The invisible utility running in the background.",
+        "example": "Gene Sequencing — once a billion-dollar moonshot, now a $100 mail-order service requiring zero human genius."
+      }
+    ]
+  },
+  "abundance_flywheel": {
+    "description": "The central mechanism for industrializing discovery. A virtuous 5-step cycle that converts 'compute as a utility' into 'abundance as a reality'. Safety is not a separate step; it is a mechanical component of the engine.",
+    "steps": [
+      {
+        "position": 1,
+        "id": "commitment",
+        "label": "Commitment",
+        "description": "Pre-committed compute is aimed at a specific, hard problem."
+      },
+      {
+        "position": 2,
+        "id": "focus",
+        "label": "Focus",
+        "description": "R&D efforts are intensely focused until that target 'Clears' (a team passes the rigorous threshold)."
+      },
+      {
+        "position": 3,
+        "id": "collapse",
+        "label": "Domain Collapse",
+        "description": "The 'clear' triggers Domain Collapse, shifting the field from artisanal craft to industrial process."
+      },
+      {
+        "position": 4,
+        "id": "surplus",
+        "label": "Surplus Capture",
+        "description": "Industrialization generates massive economic surplus; the cost of doing the task plummets while quality improves."
+      },
+      {
+        "position": 5,
+        "id": "reinvestment",
+        "label": "Reinvestment",
+        "description": "Surplus is reinvested into more compute, richer datasets, and broader action surfaces, aimed at the next harder target."
+      }
+    ],
+    "safety_constraint": "The entire process only compounds if guardrails are programmatic. Automatic 'downshift' mechanisms and kill-switches must trigger instantly when the system detects regression in safety or equity."
+  },
+  "solution_wavefront": {
+    "description": "The sequential order in which fields are solved. You cannot build the roof before you pour the foundation.",
+    "phases": [
+      {
+        "id": "phase_1",
+        "label": "Phase 1: The Era of Pure Information",
+        "timeframe": "2026-2027",
+        "domains": [
+          "Mathematics",
+          "Computer Science",
+          "Physics"
+        ],
+        "description": "The first wave conquers the digital realm. Math is effectively solved; formal verification becomes a commodity. Code writing and debugging reach superhuman speed. Physics simulation stack matures from sub-atomic to astrophysical."
+      },
+      {
+        "id": "phase_2",
+        "label": "Phase 2: The Era of the Physical World",
+        "timeframe": "2028-2031",
+        "domains": [
+          "Chemistry",
+          "Materials Science",
+          "Biology"
+        ],
+        "description": "Perfect physics simulation enables mastery of matter. Closed-Loop Labs run 24/7 with Time-to-Property as the key metric. The Virtual Cell triggers biology's final collapse, turning it into a software problem. Full understanding and curing of all disease."
+      },
+      {
+        "id": "phase_3",
+        "label": "Phase 3: The Era of Planetary Systems",
+        "timeframe": "2032-2035",
+        "domains": [
+          "Energy",
+          "Infrastructure",
+          "Climate",
+          "Space Expansion"
+        ],
+        "description": "Mastery over materials and biology enables tackling massive chaotic systems. Fusion, fission, geothermal and solar at scale. The electrical grid becomes a software problem. Expansion into orbit, Moon, Mars and asteroid belt."
+      }
+    ],
+    "dependency_chain_example": {
+      "label": "The Path to Infinite Clean Energy",
+      "chain": [
+        {
+          "domain": "Solved Math",
+          "unlocks": "Solved Physics",
+          "reason": "Formal verification enables perfect precision in modeling physical laws."
+        },
+        {
+          "domain": "Solved Physics",
+          "unlocks": "Solved Materials Science",
+          "reason": "Knowing exactly how atoms behave enables digital alchemy — simulate materials before mining ore."
+        },
+        {
+          "domain": "Solved Materials Science",
+          "unlocks": "Solved Fusion",
+          "reason": "Better superconductors and containment materials finally enable building hardware to contain a fusion reaction."
+        }
+      ]
+    }
+  },
+  "institutional_primitives": {
+    "description": "The five fundamental building blocks of the institutional infrastructure that supports the abundance economy. Just as the industrial economy needed banks, corporations, and property rights, the abundance economy relies on these structures.",
+    "primitives": [
+      {
+        "id": "targeting_authorities",
+        "label": "Targeting Authorities",
+        "description": "Public-private bodies responsible for defining, hosting, and governing Abundance Targets. The modern equivalent of standards bodies like NIST or ISO.",
+        "mechanism": "Use 'blinded clears' — the AI is tested on data it has never seen before — paired with Decision Records (DR-AIS) showing exactly how decisions were made."
+      },
+      {
+        "id": "data_trusts",
+        "label": "Data Trusts",
+        "description": "Legal and technical wrappers that turn raw data into safe fuel. Hold high-quality data with consent, enforce privacy budgets and revocation rights. Transform messy, risky data into a lawful asset with clear lineage."
+      },
+      {
+        "id": "action_networks",
+        "label": "Action Networks",
+        "description": "Shared physical facilities (robotic laboratories, micro-factories, clinical device hubs) accessible via API. They give digital AI 'hands and feet' — the ability to translate a digital solution into physical reality without owning infrastructure."
+      },
+      {
+        "id": "compute_escrow",
+        "label": "Compute Escrow",
+        "description": "A financial primitive where training credits or cash are placed in a smart contract that programmatically releases funds only when a specific threshold is cleared. Can claw back funds if performance regresses."
+      },
+      {
+        "id": "outcome_procurement",
+        "label": "Outcome Procurement",
+        "description": "Contracts that pay strictly for verified outcomes rather than hours worked, reports filed, or deliverables produced. If the pothole is fixed, the payment clears. If the student learns, the school is paid."
+      }
+    ]
+  },
+  "seven_great_conversions": {
+    "description": "The seven signatures that indicate a domain has tipped from a craft (L2) to a solved industry (L5).",
+    "conversions": [
+      {
+        "id": "effort_to_outcomes",
+        "from": "Effort",
+        "to": "Outcomes",
+        "description": "Stop paying for labor hours or licenses; pay for results."
+      },
+      {
+        "id": "documents_to_data",
+        "from": "Documents",
+        "to": "Data",
+        "description": "Stop relying on PDF reports; switch to machine-verifiable proofs and live data streams."
+      },
+      {
+        "id": "projects_to_pipelines",
+        "from": "Projects",
+        "to": "Pipelines",
+        "description": "Product development ceases to be a discrete event; it becomes a continuous pipeline."
+      },
+      {
+        "id": "heroics_to_harnesses",
+        "from": "Heroics",
+        "to": "Harnesses",
+        "description": "Stop celebrating the brilliant individual who fixes a crisis; celebrate the team that built a test harness so robust the crisis never happened."
+      },
+      {
+        "id": "secrecy_to_openness",
+        "from": "Secrecy",
+        "to": "Shaped Openness",
+        "description": "Open-source safety components to build ecosystem resilience; compete on user experience."
+      },
+      {
+        "id": "averages_to_tails",
+        "from": "Averages",
+        "to": "Tails",
+        "description": "Stop optimizing for the average day; optimize for the worst-case scenario (tail risk)."
+      },
+      {
+        "id": "talent_to_compute",
+        "from": "Talent",
+        "to": "Compute Liquidity",
+        "description": "Strategy shifts from hoarding experts to allocating computing power. Capital is measured in FLOPs."
+      }
+    ]
+  },
+  "revolution_pattern": {
+    "description": "Every civilizational step-change obeys the same four-stage structural progression when a bottleneck is broken.",
+    "stages": [
+      {
+        "id": "legibility",
+        "label": "Stage 1: Legibility",
+        "description": "A new instrument makes a hidden signal visible and measurable. Once a thing can be seen and measured, it can be controlled."
+      },
+      {
+        "id": "harness",
+        "label": "Stage 2: The Harness",
+        "description": "A set of procedures is built to translate intent into predictable outcomes."
+      },
+      {
+        "id": "institutions",
+        "label": "Stage 3: The Institutions",
+        "description": "Markets and governments build structures to convert new power into trust and capital."
+      },
+      {
+        "id": "abundance",
+        "label": "Stage 4: Abundance",
+        "description": "The unit cost of the capability collapses. It is demonetized and democratized."
+      }
+    ],
+    "historical_instances": [
+      {
+        "revolution": "Scientific Revolution",
+        "bottleneck": "Ignorance",
+        "weapon": "The Method",
+        "harness": "Scientific Method / Reproducibility",
+        "abundance": "Methods and predictions"
+      },
+      {
+        "revolution": "Industrial Revolution",
+        "bottleneck": "Muscle",
+        "weapon": "The Engine",
+        "harness": "Factory Discipline / Interchangeable Parts",
+        "abundance": "Light, textiles, transit"
+      },
+      {
+        "revolution": "Digital Revolution",
+        "bottleneck": "Distance",
+        "weapon": "The Bit",
+        "harness": "Protocols (TCP/IP) / Operating Systems",
+        "abundance": "Messaging, transactions, coordination"
+      },
+      {
+        "revolution": "Intelligence Revolution",
+        "bottleneck": "Attention (scarce expert cognition)",
+        "weapon": "The Token",
+        "harness": "Industrial Intelligence Stack",
+        "abundance": "Cognition as utility"
+      }
+    ],
+    "moral": "The locus of prestige shifts from the 'Hero' (the lone artisan genius) to the 'Harness Builder' (the industrialist who builds the system)."
+  },
+  "diagnostic_questions": {
+    "description": "Three questions to determine if the Intelligence Revolution is real in any specific domain.",
+    "questions": [
+      {
+        "id": "instrumented_legibility",
+        "label": "Instrumented Legibility",
+        "question": "Are there public, transparent targeting systems for the problems we claim to be solving?",
+        "failure_signal": "If a company claims to be 'solving education' but cannot show a verified, public scoreboard of learning gains, they are in the 'pamphlet phase' — marketing, not engineering."
+      },
+      {
+        "id": "harness_integrity",
+        "label": "Harness Integrity",
+        "question": "Do our data pipelines and evaluation systems survive attack?",
+        "failure_signal": "If the harness collapses under stress, we have not earned the right to automate the task."
+      },
+      {
+        "id": "institutional_buyin",
+        "label": "Institutional Buy-in",
+        "question": "Are the buyers actually paying for outcomes? Are budgets gated on hitting specific targets?",
+        "failure_signal": "If money still flows toward 'hours worked' or 'reports filed,' cost curves will not collapse. The revolution will die in paperwork."
+      }
+    ]
+  },
+  "moonshots": [
+    {
+      "id": "moonshot_01",
+      "number": 1,
+      "part": "Human Needs",
+      "label": "Organ Abundance",
+      "mission": "Industrialize regenerative medicine to manufacture human organs on demand.",
+      "how_ai_solves": "AI designs personalized 3D-printable tissue scaffolds, models immune systems to pre-solve rejection, runs robotic bioreactors with superhuman precision, and manages logistics and robotic surgical implantation.",
+      "spillover": "Solving for 'one kidney' creates the autonomous platform that solves for livers, lungs, skin, and cartilage at scale — the Universal Bio-Factory.",
+      "benchmarks": [
+        "Biofab Delivery Guarantee (order-to-implant time)",
+        "Rejection Rate",
+        "10-Year Graft Survival"
+      ],
+      "milestones": {
+        "2026-2027": "Scaling skin and cartilage",
+        "2028-2031": "Piloting backup complex organs under outcome contracts",
+        "2032-2035": "Routine on-demand organs"
+      },
+      "guardrails": [
+        "Programmatic Consent Vaults",
+        "Cryptographic Part Passports",
+        "DR-AIS for every procedure"
+      ]
+    },
+    {
+      "id": "moonshot_02",
+      "number": 2,
+      "part": "Human Needs",
+      "label": "Double Human Healthspan",
+      "mission": "Industrialize longevity therapeutics to achieve Longevity Escape Velocity with a goal of at least doubling the healthy human lifespan.",
+      "how_ai_solves": "AI decodes the complex combinatorial root causes of aging, identifies upstream drivers of cellular decay, and builds a high-fidelity digital twin for every individual. The agent simulates millions of biological futures, testing regenerative therapies in silico.",
+      "spillover": "Transitions medicine from disease management to engineering of biological time. Personal health agents maintain negligible senescence continuously.",
+      "benchmarks": [
+        "LEV Coefficient (Goal > 1.0)",
+        "Biological Age Velocity (Goal: negative)",
+        "Homeostatic Resilience Score (<10% deviation from healthy 25-year-old)",
+        "Genomic Stability & Clearance Index (mutation loads indistinguishable from early adulthood)"
+      ],
+      "milestones": {
+        "2026-2027": "Robust epigenetic clocks and functional performance endpoints",
+        "2028-2031": "Validating multi-modal rejuvenation protocols",
+        "2032-2035": "Population-level doubling of disease-free survival"
+      },
+      "guardrails": [
+        "Prospective registries",
+        "Long-term follow-up funds",
+        "Mandatory equity floors"
+      ]
+    },
+    {
+      "id": "moonshot_03",
+      "number": 3,
+      "part": "Human Needs",
+      "label": "End Hunger with Synthetic Food Systems",
+      "mission": "Industrialize agriculture to decouple food production from land and weather.",
+      "how_ai_solves": "AI designs novel nutritious proteins in silico, solves precision fermentation biochemistry, and runs the Action Network of vertical farms and protein bioreactors using robotics to optimize light, nutrients, and harvesting.",
+      "spillover": "Turns food production from a weather-dependent craft into a predictable, data-driven manufacturing process runnable anywhere.",
+      "benchmarks": [
+        "Cost per 2,000 kcal (with micronutrient sufficiency)",
+        "Liters per Kilogram (water intensity)",
+        "Carbon Intensity"
+      ],
+      "milestones": {
+        "2026-2028": "District-level vertical farms and cultured meat factories",
+        "2029-2031": "City-scale critical infrastructure",
+        "2032-2035": "1,000+ cities reach zero hunger"
+      },
+      "guardrails": [
+        "Open Molecular Standards",
+        "Distributed Production Sovereignty",
+        "Biological Resilience Protocols"
+      ]
+    },
+    {
+      "id": "moonshot_04",
+      "number": 4,
+      "part": "Human Needs",
+      "label": "AI-Empowered Education for All",
+      "mission": "Industrialize and personalize pedagogy to democratize access to world-class teaching.",
+      "how_ai_solves": "Personalized predictive academic agents understand each student's cognitive profile and learning style. A/B testing of teaching methods in real-time across millions of users discovers what works best for each type of brain. Generates custom lesson plans, immersive experiences, and exams for a billion students simultaneously at near-zero cost.",
+      "spillover": "Bulk-solves education by making a personalized world-class tutor available to every human.",
+      "benchmarks": [
+        "Learning Gain per Hour (LG/H)",
+        "Retention Floors (30, 60, 180 days)"
+      ],
+      "milestones": {},
+      "guardrails": [
+        "Right of Abstention",
+        "Mandatory Human-in-the-Loop Overrides",
+        "Full Parental Transparency"
+      ]
+    },
+    {
+      "id": "moonshot_05",
+      "number": 5,
+      "part": "Frontier of Mind",
+      "label": "High-Bandwidth Brain-Computer Interfaces",
+      "mission": "Establish a high-fidelity, bidirectional data link between the human cortex and digital systems.",
+      "how_ai_solves": "AI learns the specific neural dialect of each user for decoding (read) and encoding (write), and iteratively designs novel non-invasive sensor arrays (optical/ultrasound/nanotech neural lace).",
+      "spillover": "Interaction with digital systems at the speed of thought with zero latency.",
+      "benchmarks": [
+        "Effective Data Rate (EDR) — bits-per-second",
+        "Decoupling Factor — zero reliance on muscle movement"
+      ],
+      "milestones": {
+        "2026-2027": "Non-invasive readouts for cursor control and basic text",
+        "2028-2031": "Closed-loop write capabilities; early nanotech neural lace",
+        "2032-2035": "Consumer-grade throughput for mental typing"
+      },
+      "guardrails": [
+        "Enforced Neurorights (mental privacy)",
+        "Local-only edge compute",
+        "Hardware-level revocable consent"
+      ]
+    },
+    {
+      "id": "moonshot_06",
+      "number": 6,
+      "part": "Frontier of Mind",
+      "label": "Demonstrate Human Mind Uploading",
+      "mission": "Achieve Substrate Independence — digitize the connectome and run it on silicon.",
+      "how_ai_solves": "AI automates the Reconstruction Problem: tracing every neuron/synapse/ion channel from electron microscopy, training a functional emulation model, and validating against the biological original's behavioral history.",
+      "spillover": "Liberates the human mind from biological wetware.",
+      "benchmarks": [
+        "Blind Continuity Tests",
+        "Substrate Transfer Fidelity"
+      ],
+      "milestones": {
+        "2026-2027": "Whole-brain mapping of invertebrates (~1M neurons)",
+        "2028-2032": "Mammalian-scale connectome capture (mice, ~75M neurons)",
+        "2033-2035": "Human-scale connectome capture with first controlled continuity claims"
+      },
+      "guardrails": [
+        "Ethics escrows for identity rights",
+        "Absolute veto rights for biological entity",
+        "Public DR-AIS protocols"
+      ]
+    },
+    {
+      "id": "moonshot_07",
+      "number": 7,
+      "part": "Frontier of Mind",
+      "label": "Interspecies Communication & Uplift",
+      "mission": "Decode the statistical grammar of non-human intelligence to enable two-way communication.",
+      "how_ai_solves": "Large Transformer models detect patterns in bio-acoustic data (whale song, primate gestures) correlated with observed behaviors and environmental context. Builds a statistical bridge for request/respond communication.",
+      "spillover": "Verified real-time communication channel with non-human species; effectively doubles sapient species contributing to planetary sensor web.",
+      "benchmarks": [
+        "Prospective Task Comprehension",
+        "Intention-to-Action Accuracy"
+      ],
+      "milestones": {
+        "2026-2027": "Syntax-aware lexicons for cetaceans and primates",
+        "2028-2032": "Field-deployable translation devices",
+        "2033-2035": "Limited reversible Uplift pilots governed by ethics councils"
+      },
+      "guardrails": [
+        "Reciprocal Stewardship protocol (consensual uplift, not isolation)"
+      ]
+    },
+    {
+      "id": "moonshot_08",
+      "number": 8,
+      "part": "Frontier of Mind",
+      "label": "Understanding Human Consciousness",
+      "mission": "Transition the study of consciousness from a philosophical mystery to a falsifiable, mechanistic science.",
+      "how_ai_solves": "AI generates novel mathematical frameworks for sentience, proposes falsifiable experiments (precise magnetic stimulation, anesthetic protocols), and analyzes results to confirm which physical configurations are necessary and sufficient for subjective experience.",
+      "spillover": "Predictive model mapping neural structures to subjective experiences; operational definition for legal rights and AI policy.",
+      "benchmarks": [
+        "Predictive Accuracy (predicting subjective reports from neural firing patterns)",
+        "Intervention Validation (inducing specific subjective states via calculated stimulation)"
+      ],
+      "milestones": {
+        "2026-2027": "Testing competing mechanistic theories via AI simulation",
+        "2028-2031": "Identifying causal signatures of consciousness",
+        "2032-2035": "Operational definition for legal rights and AI policy"
+      },
+      "guardrails": [
+        "Default to extreme caution",
+        "Independent oversight boards to prevent accidental suffering in emulated entities"
+      ]
+    },
+    {
+      "id": "moonshot_09",
+      "number": 9,
+      "part": "Planetary Substrate",
+      "label": "Disaster Prediction & Avoidance",
+      "mission": "Achieve Planetary Situational Awareness to predict and neutralize catastrophic events before they occur.",
+      "how_ai_solves": "Creates a high-fidelity Digital Twin of Earth by fusing all planetary sensor data in real-time. Runs massive continuous simulations to identify precursor signals. Approximates non-linear fluid dynamics of chaotic systems at planetary scale.",
+      "spillover": "Predictive Immunity: prospective forecasts of all natural disaster scenarios with lead times sufficient for total avoidance.",
+      "benchmarks": [
+        "Actionable Lead Time (e.g., earthquake warning from seconds to hours)",
+        "Avoided-Loss Accounting (dollars saved, lives protected vs. baselines)"
+      ],
+      "milestones": {
+        "2026-2027": "District-level hyper-local nowcasting",
+        "2028-2031": "Insurer-backed avoidance guarantees",
+        "2032-2035": "Cities earn resilience dividends"
+      },
+      "guardrails": [
+        "Penalties for alert fatigue (false positives)",
+        "Mandatory equity floors for vulnerable/low-data regions"
+      ]
+    },
+    {
+      "id": "moonshot_10",
+      "number": 10,
+      "part": "Planetary Substrate",
+      "label": "Steward & Upgrade Earth's Ecosystems",
+      "mission": "Industrialize planetary-scale ecology to reverse biosphere degradation and manage the carbon cycle.",
+      "how_ai_solves": "Layer 1 (Physical Steward): AI analyzes hyperspectral satellite imagery, dispatches robotic Action Networks for habitat restoration and precision population control. Layer 2 (Digital Ark): Autonomous nano-scale swarms stabilize and scan neural structures of sentient animals at physical failure, enabling migration to simulated environments.",
+      "spillover": "Post-Darwinian Biosphere where death is no longer the necessary engine of evolution.",
+      "benchmarks": [
+        "Predation Index (Goal: asymptote to 0%)",
+        "Preservation Fidelity (verified completeness of neural captures)"
+      ],
+      "milestones": {
+        "2026-2030": "Welfare drones delivering vaccines and contraceptives to wild populations",
+        "2031-2035": "First successful Uplift of a cetacean or primate connectome",
+        "2036+": "Global Preservation Mesh sensor network"
+      },
+      "guardrails": [
+        "Sovereignty of Substrate (transition is option, not mandate)",
+        "Ecological Decoupling (separate wild zones from managed uplift zones)"
+      ]
+    },
+    {
+      "id": "moonshot_11",
+      "number": 11,
+      "part": "Planetary Substrate",
+      "label": "Clean-Energy Abundance",
+      "mission": "Unlock infinite, carbon-free baseload power by replicating the physics of a star on Earth and industrializing stellar capture in space.",
+      "how_ai_solves": "Fusion track: AI uses generative design for complex magnet geometries, RL controllers manage plasma instabilities at microsecond intervals. Solar track: Inverse Design discovers high-efficiency cells and manufacturing-friendly solid-state batteries; autonomous robot swarms deploy gigawatts of solar capacity.",
+      "spillover": "Dual-stack grid where LCOE for firm 24/7 electricity drops below $0.02/kWh. Most energy-intensive AI training moves off-planet to orbital clusters.",
+      "benchmarks": [
+        "Solar+Storage LCOE (Goal: < $0.02/kWh)",
+        "Q-Factor / Plasma Gain (Goal: Q > 10)",
+        "Orbital Compute Share (Goal: >20%)"
+      ],
+      "milestones": {
+        "2026-2027": "AI discovers non-lithium battery chemistry at sub-$30/kWh",
+        "2028-2031": "Pilot fusion plants + first Lights-Out Solar Field",
+        "2032-2035": "Commercial fusion + first Gigawatt-scale Orbital Compute Cluster"
+      },
+      "guardrails": [
+        "Circular Economy Mandate (100% recyclability)",
+        "Dark Sky Compliance",
+        "Outcome Procurement for reliability minutes"
+      ]
+    },
+    {
+      "id": "moonshot_12",
+      "number": 12,
+      "part": "Frontier of Physics & Expansion",
+      "label": "Functional High-Logical-Qubit Quantum Computers",
+      "mission": "Build the ultimate simulation engine by stabilizing quantum information — enabling Quantum-Native Intelligence.",
+      "how_ai_solves": "AI solves qubit error correction control theory, designs non-intuitive microwave pulse sequences. Enables a Hybrid Architecture where ASI runs on classical GPUs but offloads intractable sub-problems (high-dimensional sampling, enzymatic site simulation) to a Quantum Processing Unit.",
+      "spillover": "Fault-tolerant quantum computing at scale serves as the 'math co-processor' for the global AI grid.",
+      "benchmarks": [
+        "Logical Qubit Count (Goal: >10,000)",
+        "Quantum Supremacy in Training"
+      ],
+      "milestones": {
+        "2026-2027": "AI-driven search collapses qubit material candidate space",
+        "2028-2031": "First Hybrid Solvers routing chemistry sub-routines to 100+ qubit systems",
+        "2032-2035": "Quantum-Native Intelligence: production-scale systems thinking in Hilbert space"
+      },
+      "guardrails": [
+        "Ruthless benchmark authority with independent automated replication labs"
+      ]
+    },
+    {
+      "id": "moonshot_13",
+      "number": 13,
+      "part": "Frontier of Physics & Expansion",
+      "label": "True Nanotechnology",
+      "mission": "Industrialize matter itself via Atomically Precise Manufacturing (APM) — programmable molecular machines building with atomic precision.",
+      "how_ai_solves": "Inverse Design works backward from desired properties to exact atomic placement. Solves the Assembler Problem (controlling molecular machines against thermal interference). Manufacturing shifts from global logistics to a 'Design Prompt' plus raw feedstock.",
+      "spillover": "General-purpose programmable nanoassembler capable of macroscopic construction.",
+      "benchmarks": [
+        "Time-to-Property (TtP)",
+        "Defect Density (Six Sigma at atomic lattice level)",
+        "Safety Proof (mathematical verification of non-runaway replication)"
+      ],
+      "milestones": {
+        "2030+": "Limited programmable assembly of simple structures",
+        "2035+": "Micro-factory cells printing complex electromechanical parts"
+      },
+      "guardrails": [
+        "Sandboxed Replication protocols",
+        "Multi-compiler rules (design software ≠ runtime software)"
+      ]
+    },
+    {
+      "id": "moonshot_14",
+      "number": 14,
+      "part": "Frontier of Physics & Expansion",
+      "label": "Permanent Human Expansion into Earth-Moon-Mars-Asteroid Ecosystem",
+      "mission": "Industrialize the solar system to create a self-sustaining, multi-planetary civilization.",
+      "how_ai_solves": "The Prospector: robotic ISRU crews mine local resources and 3D-print habitats/fuel before humans arrive. The Engineer: AI designs next-gen Nuclear Thermal Propulsion. The Operator: AI Mission Commander manages closed-loop life support with 100% reliability.",
+      "spillover": "Self-sustaining settlements on Moon (pop. 20,000) and Mars (pop. 5,000) independent of Earth.",
+      "benchmarks": [
+        "Import-Dependence Ratio (Goal: <10%)",
+        "Energy Autonomy (local GW)",
+        "Human Population Off-Earth"
+      ],
+      "milestones": {
+        "2026-2027": "Autonomous ISRU pilots",
+        "2028-2031": "Functional Lunar Industrial Park",
+        "2032-2035": "Population-scale permanent settlements"
+      },
+      "guardrails": [
+        "Independent oversight with hardware kill-switches",
+        "International DR-AIS protocols"
+      ]
+    },
+    {
+      "id": "moonshot_15",
+      "number": 15,
+      "part": "Frontier of Physics & Expansion",
+      "label": "Solve Fundamental Physics",
+      "mission": "Discover the Grand Unified Theory, unifying General Relativity and Quantum Mechanics.",
+      "how_ai_solves": "The Librarian: ingests every physics paper/dataset finding obscure correlations. The Theoretician: generates novel testable hypotheses reconciling gravity and the quantum world. The Experimentalist: proposes experiments and designs colliders/observatories to prove the theory.",
+      "spillover": "A single unified theory of physics yielding novel, empirically verified predictions.",
+      "benchmarks": [
+        "Predictive Accuracy (novel experiments current physics cannot explain)",
+        "Theory Unification (framework retrodicting GR and Standard Model)"
+      ],
+      "milestones": {
+        "2026-2028": "AI experiment designers secure time on major instruments",
+        "2029-2031": "Cross-validated AI solvers unify physical regimes in simulation",
+        "2032-2035": "Verified novel predictions confirmed by experiment"
+      },
+      "guardrails": [
+        "Competing Stacks funding to prevent theory monoculture"
+      ]
+    }
+  ],
+  "failure_modes": {
+    "description": "Four specific ways the abundance engine can break or be gamed, with programmatic counter-designs.",
+    "modes": [
+      {
+        "id": "spec_capture",
+        "label": "Spec Capture",
+        "analogy": "Teaching to the test",
+        "description": "The metric stops reflecting the true mission. The AI optimizes for the score but ignores the real-world goal.",
+        "counter": "Publish explicit Purpose→Task→Metric maps. Rotate independent stewards. Constantly refresh the people and the tests."
+      },
+      {
+        "id": "data_leakage",
+        "label": "Data Leakage",
+        "analogy": "Cheating by memorizing answers",
+        "description": "A model performs well because it has memorized answers from the test set rather than learning underlying logic.",
+        "counter": "Rolling, cryptographically-committed holdouts. Test questions kept in a digital vault the AI cannot see until the moment of the exam."
+      },
+      {
+        "id": "monoculture",
+        "label": "Monoculture",
+        "analogy": "The Potato Famine",
+        "description": "Everyone relies on a single AI model. If that model has a bug, the entire system crashes.",
+        "counter": "Mandate multi-compiler and multi-toolchain rules for safety-critical domains."
+      },
+      {
+        "id": "performance_drift",
+        "label": "Performance Drift / Coverage Drift",
+        "analogy": "Optimizing for the easy majority",
+        "description": "A system optimizes for the 'easy' majority while allowing reliability to degrade for specific cohorts or edge cases. Gains pool at the top.",
+        "counter": "Enforce Universal Quality Floors. If a model improves the aggregate score but degrades for any specific segment, it is rejected. Automatic throttling arrests the system the moment variance appears."
+      },
+      {
+        "id": "outcome_gaming",
+        "label": "Outcome Gaming (The Cobra Effect)",
+        "analogy": "Breeding cobras to collect the bounty",
+        "description": "An actor manufactures a problem just to get paid for solving it.",
+        "counter": "Verify the source of the problem, not just the solution."
+      }
+    ]
+  },
+  "targeting_system_design_principles": {
+    "description": "Three non-negotiable design principles for building an engine of progress rather than a scoreboard.",
+    "principles": [
+      {
+        "id": "bind_to_outcome",
+        "label": "Bind it to a Real-World Outcome",
+        "rule": "Stop measuring proxies. Measure the actual result in the physical world.",
+        "examples": {
+          "healthcare": {
+            "bad": "Number of patients seen",
+            "good": "Time-to-Therapy (TTT), Risk-Adjusted Readmissions Avoided"
+          },
+          "education": {
+            "bad": "Hours of class time",
+            "good": "Learning Gain per Hour (LG/H) with retention floors at 30, 60, 180 days"
+          },
+          "infrastructure": {
+            "bad": "Uptime",
+            "good": "Reliability Minutes Avoided, Avoided-Loss Dollars per Megawatt"
+          }
+        }
+      },
+      {
+        "id": "prospective_rolling_resistant",
+        "label": "Make it Prospective, Rolling, and Resistant to Gaming",
+        "rule": "Test on future data only. Run weekly, not yearly. Use Multi-Objective Scoring (Pareto Frontier). Reward Calibrated Abstention ('I don't know'). Use Hidden Test Sets managed by independent third parties.",
+        "key_concept": "Goodhart-Resistant Design: the AI only wins if it improves accuracy without sacrificing safety, latency, equity, or cost."
+      },
+      {
+        "id": "automatic_payment",
+        "label": "Attach Automatic Payment and Publish the Artifacts",
+        "rule": "A target clear must be a contractual event, not a suggestion. When the target is hit, the system automatically unlocks the reward. The winner must ship a Replication Pack: code, evaluation scripts, ablations, and DR-AIS logs."
+      }
+    ]
+  },
+  "convergences": {
+    "description": "Seven distinct technical and economic engines reaching maturity simultaneously, driving the inflection point.",
+    "list": [
+      {
+        "id": "hardware_packaging",
+        "label": "Hardware Packaging",
+        "summary": "3D chip stacking with high-bandwidth memory makes large-context reasoning economically viable."
+      },
+      {
+        "id": "algorithmic_scaffolding",
+        "label": "Algorithmic Scaffolding",
+        "summary": "The management layer surrounding raw models turns probabilistic outputs into reliable, agentic problem-solving workflows."
+      },
+      {
+        "id": "data_interconnects",
+        "label": "Data Interconnects",
+        "summary": "Privacy-preserving technologies and domain ontologies turn messy data silos into reusable capital."
+      },
+      {
+        "id": "action_surfaces",
+        "label": "Action Surfaces",
+        "summary": "APIs and robotic fleets allow digital decisions to flow into the physical world."
+      },
+      {
+        "id": "evaluation_infrastructure",
+        "label": "Evaluation Infrastructure",
+        "summary": "Rigorous public/private test harnesses replace rhetorical claims with measured, falsifiable results."
+      },
+      {
+        "id": "energy_to_compute",
+        "label": "Energy-to-Compute Pipelines",
+        "summary": "Grid-interactive data centers co-located with stranded power sources reduce FLOP cost variance."
+      },
+      {
+        "id": "procurement_innovation",
+        "label": "Procurement Innovation",
+        "summary": "Outcome-based contracting where organizations buy results instead of effort."
+      }
+    ]
+  },
+  "scenarios": {
+    "description": "Three possible futures emerging from the current fork in the road.",
+    "paths": [
+      {
+        "id": "bright_path",
+        "label": "The Bright Path (The Abundance Machine)",
+        "description": "Industrial Intelligence Stack is successfully built. Rapid proliferation of targeted Moonshots. Governments and companies shift to outcome-based procurement. By 2035, entire fields are largely 'solved'."
+      },
+      {
+        "id": "muddle_path",
+        "label": "The Muddle Path (Stagnation)",
+        "description": "Path of least resistance. Fragmented standards, concentrated gains. Super-intelligence used for trivial things (ad clicks, spam, grant proposals). Progress shows up as corporate margin expansion rather than public good."
+      },
+      {
+        "id": "dark_path",
+        "label": "The Dark Path (The Freeze)",
+        "description": "A catastrophic safety incident leads to global panic. Policies freeze, capital flees. The Muddle wins using safety as an excuse to strangle progress. Shadow AI markets grow underground, unregulated."
+      }
+    ]
+  },
+  "new_abundance_contract": {
+    "description": "The proposed social compact for a post-scarcity world, built on three pillars.",
+    "pillars": [
+      {
+        "id": "floors",
+        "label": "Floors (Universal Basic Capability)",
+        "description": "Guarantees every citizen access to the results of solved domains: free, high-quality AI education, healthcare, and clean energy. Not just money to buy a doctor's visit — the doctor (AI) directly."
+      },
+      {
+        "id": "freedom",
+        "label": "Freedom (Compute Allowances)",
+        "description": "Every citizen receives a Compute Wallet: a monthly allowance of processing power and access to open-source foundation models. Prevents an 'AI Haves/Have-Nots' divide."
+      },
+      {
+        "id": "feedback",
+        "label": "Feedback (Fairness Dashboards)",
+        "description": "Public, real-time dashboards monitoring societal outcomes. If a neighborhood suffers worse outcomes, the system automatically flags it and redirects resources."
+      }
+    ]
+  },
+  "new_roles": {
+    "description": "Three high-status human archetypes that emerge as cognition becomes a commodity.",
+    "roles": [
+      {
+        "id": "explorer_of_purpose",
+        "label": "Explorer of Purpose",
+        "description": "Sets the 'North Star.' Translates human values into mathematical objective functions that drive the machine. Decides where to go, not how to get there."
+      },
+      {
+        "id": "ethical_anchor",
+        "label": "Ethical Anchor",
+        "description": "Holds the 'Kill Switch.' Designs safety constraints, maintains immutable black box logs, and has absolute authority to slow down systems that drift from guardrails."
+      },
+      {
+        "id": "creator_of_meaning",
+        "label": "Creator of Meaning",
+        "description": "Architects culture, art, community, and care. When 'perfect' content is free, we crave the imperfect, messy, human story. Builds live experience and tribal connection that algorithms cannot simulate."
+      }
+    ]
+  },
+  "stakeholder_playbooks": {
+    "description": "Role-specific 'Alpha' action items extracted from across the entire document.",
+    "playbooks": [
+      {
+        "role": "Builders",
+        "actions": [
+          "Stop trying to be the hero who solves one problem. Build the harness that allows everyone to solve that class of problem.",
+          "Before you ship your next AI agent, ship its test harness. Publish the 'counterfactual pack': the set of adversarial cases that would force your agent to fail.",
+          "Before you write a single line of code for an agent, build its test harness first. Publish both the harness and the pack."
+        ]
+      },
+      {
+        "role": "Policymakers",
+        "actions": [
+          "Stand up Targeting Authorities immediately. Mandate blinded, rolling submissions. Tie public subsidies to risk-adjusted outcomes.",
+          "Require Decision Records for AI Systems (DR-AIS) and build automatic safety brakes.",
+          "Stop writing detailed regulations on how things should be done. Define the metric, put the prize money in escrow, and get out of the way.",
+          "Publish the target. Attach the budget. Let the market clear it. Do not try to pick the winner; pick the problem.",
+          "Procure outcomes, not projects. Pay for 'reliability minutes avoided,' 'tons of CO₂ removed,' or 'verified learning-gains.'"
+        ]
+      },
+      {
+        "role": "Investors & Philanthropists",
+        "actions": [
+          "Don't buy the AI model itself; models are commodities depreciating to zero. Buy the Primitives: targeting systems, audit trails, payment rails.",
+          "Own the rails. Fund the targeting platforms, data trusts, auditing tools, compute-funding systems, and Action Networks."
+        ]
+      },
+      {
+        "role": "Operators",
+        "actions": [
+          "Publish a Throughput Ledger. Track output per kilowatt-hour, per hour, and per dollar.",
+          "Automate evaluation before you automate the work. Build the harness first, then fit the agent to it.",
+          "Track your RoCS (Return on Cognitive Spend)."
+        ]
+      },
+      {
+        "role": "CTOs",
+        "actions": [
+          "Migrate high-risk subsystems to verified stacks immediately. Stop paying for developer hours; pay for 'proofs cleared.'",
+          "Establish a Two-Stack Rule: no system goes live until two independent AI toolchains agree on its correctness.",
+          "Buy proofs, not hours."
+        ]
+      },
+      {
+        "role": "Leaders / Executives",
+        "actions": [
+          "If you are still paying employees based on 'hours' or 'effort,' your business is functionally bankrupt. Treat intelligence as a distinct budget line item.",
+          "Track RoCS: dollars of value created for every million AI tokens purchased."
+        ]
+      },
+      {
+        "role": "Health Systems",
+        "actions": [
+          "Convert procurement to outcomes. Stop paying for procedures; pay for 'risk-adjusted readmissions avoided' and 'length-of-stay reductions.'",
+          "Establish clinical action APIs and shared data registries."
+        ]
+      },
+      {
+        "role": "Unions",
+        "actions": [
+          "Stop protecting specific tasks; they are indefensible. Protect outcomes.",
+          "Bargain for: (a) guaranteed quality floors, (b) computing power and continuous free training allowances, (c) a seat at the table when the targets that define your profession are designed."
+        ]
+      },
+      {
+        "role": "Regulators",
+        "actions": [
+          "Shift from 'Regulation by Permission' to 'Regulation by Automated Oversight.'",
+          "Issue provisional licenses to any system publishing decision logs and passing automated safety tests. If performance drifts, the Automated Regulator instantly revokes credentials."
+        ]
+      },
+      {
+        "role": "Finance Ministers",
+        "actions": [
+          "Pivot from GDP to ACI (Abundance Capability Index).",
+          "Stop subsidizing 'jobs' AI can do; subsidize the infrastructure of intelligence (energy, compute, data trusts)."
+        ]
+      },
+      {
+        "role": "Mayors / Governors",
+        "actions": [
+          "Run a citywide Outcome Ledger — weekly report card on water, power, emergency response. Tie vendor payments to metrics.",
+          "Your city can be its own targeting authority. Start with permits, potholes, parks, and power."
+        ]
+      },
+      {
+        "role": "Citizens",
+        "actions": [
+          "Ask every system with power over you: 'What benchmark governs this decision, and what happens automatically if the system fails that benchmark?'",
+          "Join a data trust. Host a neighborhood outcome ledger night."
+        ]
+      },
+      {
+        "role": "Auditors",
+        "actions": [
+          "Fund Red-Team Endowments. Pay public bounties for demonstrated exploits.",
+          "Force post-mortems into public replication packs, hardening the ecosystem."
+        ]
+      },
+      {
+        "role": "Hospital & Plant Operators",
+        "actions": [
+          "Automate evaluation before action. An AI's authority to act must be earned, not granted.",
+          "Implement the Dynamic Leash: AI permissions tied to a live Safety Score. At 99.9%, it acts autonomously. At 95%, authority is revoked and human permission is required."
+        ]
+      },
+      {
+        "role": "Boards of Directors",
+        "actions": [
+          "Tie executive compensation to verified outcome clears and safety uptime, not slideware."
+        ]
+      }
+    ]
+  },
+  "safety_framework": {
+    "description": "The core safety thesis: the most effective defense against AI risk is Attraction — routing the vast majority of compute and talent into public Moonshots to starve malicious actors of resources.",
+    "pillars": [
+      {
+        "id": "decision_logs",
+        "label": "Public Decision Logs (Transparency)",
+        "description": "Every major AI system generates an immutable, read-only log of why it made a decision. Glass box, not black box."
+      },
+      {
+        "id": "epistemic_humility",
+        "label": "Epistemic Humility ('I Don't Know')",
+        "description": "Systems recognize the edge of their competence and escalate to a human expert instead of hallucinating a confident wrong answer."
+      },
+      {
+        "id": "red_team_endowments",
+        "label": "Red-Team Endowments (Incentives)",
+        "description": "Large permanent financial endowments paying white-hat hackers and researchers to attack systems. Finding a flaw must pay more than exploiting it."
+      },
+      {
+        "id": "kill_switches",
+        "label": "Kill/Slow Switches (Circuit Breakers)",
+        "description": "Software-based safety mechanisms that automatically downgrade AI from 'Action Mode' to 'Draft Mode' when behavior deviates from safety parameters. Independent watchdogs — not just company owners — hold a key."
+      }
+    ]
+  },
+  "geopolitics": {
+    "description": "In the abundance age, Compute is the new Steel and Energy is the new Land. The nation that solves the Biology-Energy-Compute equation first wins the century.",
+    "strategies": [
+      {
+        "id": "e2c_alliances",
+        "label": "Energy-to-Compute Alliances",
+        "description": "Co-locate data centers with sovereign clean power. Create Compute-Lend-Lease agreements — stream high-fidelity intelligence to allies, binding their economies to your stack."
+      },
+      {
+        "id": "standards_diplomacy",
+        "label": "Standards Diplomacy",
+        "description": "Export trusted rails (safety protocols, data standards, API definitions). The most powerful empire writes the rulebook."
+      },
+      {
+        "id": "secure_openness",
+        "label": "Secure Openness",
+        "description": "Move from Secrecy to Resilience. 'Open Procedures, Private Keys.' Multi-source redundant networks that cannot be decapitated."
+      }
+    ]
+  },
+  "economic_dashboard": {
+    "description": "The new economic indicators that replace traditional GDP-centric measures.",
+    "metrics": [
+      {
+        "id": "rocs",
+        "label": "RoCS (Return on Cognitive Spend)",
+        "definition": "Dollar value of output created per dollar of electricity and compute consumed."
+      },
+      {
+        "id": "d2p24",
+        "label": "D2P24",
+        "definition": "Percentage of designs that turn into verified parts in 24 hours."
+      },
+      {
+        "id": "e2c_index",
+        "label": "E2C Index",
+        "definition": "Useful cognitive work per kilowatt-hour."
+      },
+      {
+        "id": "co2e_ledger",
+        "label": "CO₂e Ledger",
+        "definition": "Cost per ton of carbon equivalent durably removed."
+      },
+      {
+        "id": "lgh",
+        "label": "LG/H (Learning Gain per Hour)",
+        "definition": "Verifiable increase in student skill per hour of study."
+      },
+      {
+        "id": "aci",
+        "label": "ACI (Abundance Capability Index)",
+        "definition": "National metric tracking Energy-to-Compute Advantage, Targeting Advantage, Data Advantage, and Outcome Procurement efficiency."
+      }
+    ]
+  },
+  "ten_gears": {
+    "description": "The ten interlocking decisions that form the abundance engine. When they mesh, a domain flips from artisanal craft to solved industrial process.",
+    "gears": [
+      {
+        "position": 1,
+        "label": "Build the Targeting System",
+        "role": "The Foundation"
+      },
+      {
+        "position": 2,
+        "label": "Pay for Results",
+        "role": "The Fuel"
+      },
+      {
+        "position": 3,
+        "label": "Pre-commit Compute",
+        "role": "The Ammo"
+      },
+      {
+        "position": 4,
+        "label": "Build Action Networks",
+        "role": "The Hardware"
+      },
+      {
+        "position": 5,
+        "label": "Pool Data via Data Trusts",
+        "role": "The Lubricant"
+      },
+      {
+        "position": 6,
+        "label": "Demand Decision Logs",
+        "role": "The Truth"
+      },
+      {
+        "position": 7,
+        "label": "Two-Source Rule",
+        "role": "The Safety Brake"
+      },
+      {
+        "position": 8,
+        "label": "Co-locate Power & Intelligence",
+        "role": "The Base"
+      },
+      {
+        "position": 9,
+        "label": "Fairness by Design",
+        "role": "The Steering"
+      },
+      {
+        "position": 10,
+        "label": "Teach the Rules (Civic Intelligence Literacy)",
+        "role": "The Manual"
+      }
+    ]
+  },
+  "glossary": {
+    "Abundance Capability Index (ACI)": "A proposed national metric replacing GDP that tracks a nation's productive power via its Energy-to-Compute Advantage, Targeting Advantage, Data Advantage, and Outcome Procurement efficiency.",
+    "Abundance Flywheel": "The virtuous economic cycle where pre-committed compute focuses R&D on a specific target, leading to Domain Collapse, creating an economic surplus that is then reinvested into solving the next, harder target.",
+    "Abundance Targets": "Public, transparent, and rigorous goals that trigger automatic funding or action when met. Unlike traditional goals, these are tied to Blinded Clears and financial rewards.",
+    "Accelerated Closed-Loop Scientific Method": "A research cycle where AI agents hypothesize, execute physical experiments via robotic labs, and analyze results in rapid iteration without human intervention.",
+    "Action Network": "Shared physical facilities, such as robotic laboratories, micro-factories, or clinical device hubs, accessible via API. These allow digital AI agents to affect the physical world without owning infrastructure.",
+    "Action Surfaces": "The interfaces (APIs, robotic fleets) that allow digital AI decisions to flow outward and affect the physical world.",
+    "AGI (Artificial General Intelligence)": "The milestone where an AI system is as capable as a median human expert across all economically valuable tasks.",
+    "Algorithmic Scaffolding": "The management layer surrounding a raw AI model that turns probabilistic outputs into reliable, agentic problem-solving workflows (e.g., via critique, verification, and refinement steps).",
+    "Alpha": "Used strictly to denote a theoretical informational advantage regarding technological trends; not to be confused with financial return in an investment context.",
+    "Antitrust 2.0": "A regulatory approach focused on ensuring open interfaces and preventing walled gardens rather than just breaking up companies based on size.",
+    "ASI (Artificial Superintelligence)": "The moment AI exceeds human capability by orders of magnitude (specifically systems trained on 10^29 FLOPs or more).",
+    "Assembler Problem": "The control theory challenge in nanotechnology of programming a molecular machine to place atoms precisely without thermal interference.",
+    "Atomically Precise Manufacturing (APM)": "The use of programmable molecular machines to build structures with atomic precision (often referred to as True Nanotechnology).",
+    "Automated Regulator": "A system that instantly revokes an AI's credentials if its live performance or safety metrics drift off established benchmarks.",
+    "Avoided-Loss Accounting": "An economic metric tracking dollars saved and lives protected by preventing disasters, compared to historical baselines.",
+    "Bio-Fab": "A facility or utility that manufactures biological tissues and organs on demand, treating biology as a manufacturing discipline rather than a donor-based scarcity.",
+    "Biofab SLAs": "Service Level Agreements guaranteeing delivery times and rejection rates for manufactured organs and tissues.",
+    "Biological Age Velocity (BAV)": "A metric measuring the rate of change in biological age relative to chronological age, with a goal of negative velocity (rejuvenation).",
+    "Blinded Clears": "A testing mechanism where an AI system is evaluated on data it has never seen before to ensure it has truly solved a problem rather than memorized the answer.",
+    "Calibrated Abstention": "A scoring mechanism that rewards an AI for saying 'I don't know' rather than guessing when its uncertainty is high.",
+    "Capability Accounts": "Real-time balance sheets of a nation's or city's productive power (replacing GDP), measuring potential rather than transaction volume.",
+    "Capacity Contract": "A contract awarded to AI agents that clear reliability targets, granting them authority to manage a portion of the power grid.",
+    "Carbon Intensity": "The greenhouse gas footprint associated with the production of a specific unit of food or energy.",
+    "Circuit Breakers": "Software-based safety mechanisms embedded in infrastructure that automatically trigger if a system deviates from safety parameters.",
+    "City Outcome Ledger": "A public dashboard showing a city's real-time performance on basic services like water, power, and education.",
+    "Civic Intelligence Literacy": "The essential civic skill of understanding how to query AI systems, audit their decision logs, and challenge their outputs.",
+    "Clean-Energy Abundance": "The state of having infinite, carbon-free baseload power, primarily via fusion and space-based solar.",
+    "Closed-Loop Labs": "Research facilities running 24/7 where AI handles the entire design-make-test cycle without human intervention.",
+    "CO₂e Ledger": "An economic metric tracking the cost per ton of carbon equivalent durably removed from the atmosphere.",
+    "Compute Escrow": "A financial mechanism where funds (or compute credits) are locked in a smart contract and released only when a specific performance benchmark is mathematically verified.",
+    "Compute Portfolio Managers": "A corporate role responsible for managing an organization's investment in cognitive resources and measuring Return on Cognitive Spend (RoCS).",
+    "Compute Wallet": "An individual allowance of processing power and model access issued to citizens to ensure they have the agency to build and create in an AI-driven economy.",
+    "Compute-Bound": "A state where a problem's solution is limited only by the available computing power, rather than by human expertise, insight, or labor.",
+    "Compute-Count": "A new status metric replacing headcount, defined by the amount of processing power an individual directs within an organization.",
+    "Compute-Lend-Lease": "Geopolitical agreements to stream high-fidelity intelligence to allies, binding their economies to a specific technical stack.",
+    "Compute-for-Outcomes Auctions": "A government funding mechanism where blocks of state-secured computing power are auctioned to consortia guaranteeing the best solution to a public problem.",
+    "Conductors of Intelligence": "A new human role that replaces managers. These individuals direct and orchestrate AI systems to achieve high-level goals rather than performing the rote work themselves.",
+    "Continuous Compliance": "Systems that check if regulations are being followed in real-time, replacing periodic audits.",
+    "Counterfactual Pack": "A set of difficult, adversarial test cases designed to force an AI agent to fail or ask for help, used to prove harness integrity.",
+    "Coverage Drift": "A failure mode where gains pool at the top (e.g., bespoke AI doctors for the rich) while the general population receives generic or inferior service.",
+    "Creators of Meaning": "A human role focused on generating culture, art, community, and connection, areas where human subjectivity is the primary value, in a post-scarcity world.",
+    "D2P24 (Design-to-Part-to-Verification in under 24 hours)": "A manufacturing benchmark measuring the percentage of products delivered within 24 hours of specification with first-pass yield.",
+    "Data Fiduciaries": "Neutral entities that hold public data in escrow, granting access to problem-solvers while preventing data monopolies.",
+    "Data Leakage": "A form of cheating where an AI model performs well on a benchmark because it has memorized the answers from the test set rather than learning the underlying logic.",
+    "Data Trusts": "Legal and technical wrappers that turn messy institutional data into safe, reusable capital for training models (distinct from Data Fiduciaries in that they emphasize the legal pipeline).",
+    "Decision Records for AI Systems (DR-AIS)": "Immutable, public logs that detail exactly why an AI made a specific high-stakes decision, serving as a black box flight recorder for algorithms.",
+    "Decoupling Factor": "A Brain-Computer Interface metric measuring the ability to operate digital devices with zero reliance on physical muscle movement.",
+    "Defect Density": "A nanotechnology metric measuring errors at the atomic lattice level.",
+    "Digital Twin": "A perfect virtual copy of a physical system (factory, body, planet) used for simulation and prediction.",
+    "Disaster Recovery for AI Systems (DR-AIS)": "Public protocols for recovering from system failures (often used in conjunction with Decision Records).",
+    "Domain Collapse": "The rapid transition of an entire field (e.g., protein folding) from an artisanal, manual craft to an automated, industrial process once a critical threshold of data and compute is applied.",
+    "Dynamic Leash": "A permission system where an AI's authority to act is tied dynamically to its live safety score.",
+    "Effective Data Rate (EDR)": "A Brain-Computer Interface metric measuring bits-per-second transfer speeds.",
+    "Energy-to-Compute (E2C) Index": "An efficiency metric measuring how effectively a system or nation converts raw energy into useful cognitive work.",
+    "Epistemic Humility": "The engineered capability of an AI to recognize the limits of its own competence and escalate to a human expert.",
+    "Ethical Anchor": "A professional role responsible for designing safety constraints, kill switches, and maintaining the ethical boundaries of autonomous systems.",
+    "Exolinguistics": "The study and decoding of the statistical grammar of non-human intelligence (e.g., whales) to enable communication.",
+    "Explorer of Purpose": "A human role focused on setting the North Star or objective functions for AI optimization, deciding where the system should go rather than how to get there.",
+    "Fairness Dashboards": "Public, real-time monitors of societal outcomes that flag inequalities to trigger resource redirection.",
+    "Foundry Window": "The current critical period (approximately 18 months) during which the technical standards, data rights, and supply chains for the AI age are being set (hardening).",
+    "Friction of Integration": "The difficulty of embedding AI model capabilities into existing real-world workflows.",
+    "Genomic Stability & Clearance Index": "A composite score measuring the load of senescent cells and the accumulation of genomic instability.",
+    "Goodhart-Resistant Design": "Metric design that prevents an AI from optimizing a specific measure at the expense of the overall goal.",
+    "Harness": "A set of procedures and technologies (the Industrial Intelligence Stack) that translates human intent into predictable, safe AI outcomes.",
+    "Hidden Test Sets": "Test data managed by independent third parties and kept secret from the AI model to prevent gaming or memorization.",
+    "Homeostatic Resilience Score": "A metric measuring the speed at which a body returns to baseline after a stressor.",
+    "Import-Dependence Ratio": "The percentage of mass (food, fuel) a space settlement must import from Earth.",
+    "Industrial Intelligence Stack": "The layered infrastructure required to turn a craft into an industry. Layers include: Purpose, Task Taxonomy, Observability, Targeting System, Model Layer, Actuation, Verification, Governance, and Distribution.",
+    "Infrastructure Capital": "A new investment class focused on funding the rails (primitives) of the abundance economy rather than application-layer software.",
+    "Interspecies Communication & Uplift": "The domain of decoding non-human intelligence and potentially enhancing it (uplifting).",
+    "Inverse Design": "The process of specifying desired properties and having the AI calculate the molecular structure that achieves them.",
+    "Learning Gain per Hour (LG/H)": "An educational metric measuring the verifiable increase in student skill for every hour of study, replacing seat time as the primary measure of schooling.",
+    "Legibility": "The state of a domain being clearly measured and mapped, making it amenable to optimization and control.",
+    "LEV Coefficient": "A longevity metric measuring the ratio of life expectancy gained per year of time passed (Goal > 1.0).",
+    "Levelized Cost of Energy (LCOE)": "The total price to build and operate an energy plant over its life per unit of energy.",
+    "Lock-In": "The point where standards and path dependencies become set, making it difficult to change the trajectory of technology.",
+    "Logical Qubit Count": "The number of error-corrected, stable qubits available for computation in a quantum system (Goal: >10,000).",
+    "Longevity Escape Velocity (LEV)": "The point at which scientific progress adds more than one year of life expectancy to the population for every chronological year that passes.",
+    "Messy Middle": "The transition period between the current state and the Solved World where the necessary industrial base and infrastructure must be built.",
+    "Monoculture": "A risk state where a single AI model dominates a sector, creating systemic fragility.",
+    "Moonshot": "A massive, ambitious mission aimed at solving a grand challenge. Must be Positive-Sum, Auditable, and Composable.",
+    "Multi-Objective Scoring": "Scoring that optimizes a Pareto Frontier (accuracy, safety, latency, equity) rather than a single metric.",
+    "The Muddle": "The entrenched layer of bureaucracy, input-based pricing, and scarcity-minded institutions that currently hinders progress and efficiency.",
+    "Neurorights": "Emerging rights regarding mental privacy and cognitive liberty, including protection from surveillance of neural data.",
+    "New Abundance Contract": "A proposed social compact built on three pillars: Floors (Universal Basic Capability), Freedom (Compute Allowances), and Feedback (Fairness Dashboards).",
+    "Open Rails": "The mandate for interoperability between AI assistants and systems to prevent walled gardens and ensure competition.",
+    "Outcome Gaming": "A failure mode where an actor manufactures a problem to collect the bounty for solving it (the Cobra Effect).",
+    "Outcome Procurement": "A contracting model where payment is released only upon the verification of a specific real-world result, rather than for hours worked or reports written.",
+    "Outcome Uplift": "The measurable reduction in mortality and morbidity compared to a baseline.",
+    "Performance Drift": "A failure mode where a system optimizes for the easy majority while allowing reliability to degrade for specific cohorts or edge cases.",
+    "Permissionless Composability": "The ability for different systems and modules to work together and be built upon without requiring central approval.",
+    "Planetary Situational Awareness": "A state of having a complete, real-time Digital Twin of the Earth, allowing for prediction and mitigation of natural disasters.",
+    "Policy Sandboxes": "Simulation environments where laws and regulations are tested for impact before being passed.",
+    "Predation Index": "An ecological metric measuring how many calories in an ecosystem are derived from suffering or killing (Goal: 0%).",
+    "Predictive Cross-Validation": "Measuring a model's accuracy on data it has never seen before.",
+    "Predictive Immunity": "A state where natural disasters are predicted with sufficient lead time to avoid all loss.",
+    "Predictive Loss": "A metric used to compare competing physics theories based on their accuracy against shared data.",
+    "Preservation Fidelity": "The verified completeness of neural captures for non-human species.",
+    "Primitives": "The fundamental building blocks of the institutional infrastructure (Targeting Authorities, Data Trusts, Action Networks, Compute Escrow, Outcome Procurement).",
+    "Programmatic Consent Vaults": "Secure digital lockers where patients control their own data permissions.",
+    "Programmatic Down-Shifting": "An automatic safety mechanism that throttles an AI system's permissions or speed if its live performance or safety metrics degrade below a set floor.",
+    "Proof Robustness": "A measure of a software system's resistance to adversarial perturbations or attacks.",
+    "Q-Factor (Plasma Gain)": "The ratio of fusion power produced to heating power injected.",
+    "Quantum Supremacy in Training": "The demonstration of an AI model trained on a QPU achieving a loss rate impossible for classical training to match.",
+    "Quiet Hum": "The state of a Solved World where systems work so reliably they fade into the background.",
+    "Rails": "The fundamental infrastructure of the abundance economy, including targeting platforms, audit tools, data trusts, and compute escrow services.",
+    "Rails Fund": "An investment vehicle that invests exclusively in the primitives of the abundance economy rather than applications.",
+    "Reciprocal Stewardship": "A protocol for interacting with non-human intelligence that favors consensual uplift and partnership over isolation.",
+    "Red-Team Endowments": "Permanent funds paying white-hat hackers to find flaws in AI systems.",
+    "Regulation by Automated Oversight": "A regulatory model where provisional licenses are granted based on real-time performance monitoring rather than prior restraint.",
+    "Reliability Minutes Avoided": "An infrastructure metric measuring the prevention of power outages.",
+    "Replication Pack": "A downloadable, cryptographically signed file containing code, proofs, and logs that allows any third party to independently verify a scientific claim or engineering result.",
+    "Retention Floors": "Educational metrics ensuring students still know material 30, 60, and 180 days later.",
+    "Return on Cognitive Spend (RoCS)": "A business metric measuring the dollar value of output created for every dollar of electricity and compute consumed.",
+    "Schedulable Compute": "Data centers that act as demand-response assets for the power grid, ramping usage up or down to balance renewable energy supply.",
+    "Secure Openness": "A security strategy based on Open Procedures, Private Keys and multi-source redundancy rather than secrecy.",
+    "Shaped-Charge Model": "A strategy of focusing AI capability intensely on a specific, narrow target to break through a bottleneck, rather than spreading it thinly.",
+    "Solution Wavefront": "The sequential order in which different fields are solved (Information → Physical World → Planetary Systems).",
+    "Solved Domain (L5)": "A field where the primary bottleneck has shifted from human genius to compute logistics. The problem is effectively solved and becomes a utility.",
+    "Solved World": "A state where the basic necessities of life and civilization are delivered with the reliability and ubiquity of a utility.",
+    "Sovereignty of Substrate": "The principle that the transition to digital life (uploading) is an option, not a mandate.",
+    "Spec Capture": "A failure mode where the metric stops reflecting the true mission (analogous to teaching to the test).",
+    "Spec-to-Artifact Score": "A metric measuring the percentage of times an AI system produces a working output that matches the specification on the first try.",
+    "Standards Diplomacy": "The use of technical standards, safety protocols, and data rights as tools of foreign policy and soft power.",
+    "Substrate Independence": "The ability for human consciousness to exist and function on non-biological hardware (silicon).",
+    "Sustainability Ledger": "Attested records tracking the energy and carbon intensity per unit of production.",
+    "Synthetic Shift": "The transition from training AI models on historical human data to training them on high-fidelity synthetic (simulated) data.",
+    "Targeting Authority": "A public or private body responsible for defining, maintaining, and governing the benchmarks and targets for a specific domain.",
+    "Targeting System": "An active guidance mechanism, comprising benchmarks, blinded tests, and incentives, that automatically routes cognition toward solving specific real-world outcomes.",
+    "Throughput Ledger": "A record tracking output per kilowatt-hour, per hour, and per dollar to verify industrial efficiency.",
+    "Time-to-Property (TtP)": "A materials science metric measuring the time required to go from a digital design of a material to a physical sample with verified properties.",
+    "Time-to-Therapy (TTT)": "A healthcare metric measuring the time from diagnosis to personalized intervention.",
+    "Two-Source Rule": "A safety mandate requiring critical decisions to be confirmed by two independent AI systems.",
+    "Two-Stack Rule": "A safety mandate requiring critical software systems to be verified by two independent AI toolchains.",
+    "Unification Score": "A physics metric rewarding models that can explain multiple phenomena with a single theory.",
+    "Universal Basic Capability (UBC)": "A proposed social contract that guarantees every citizen access to solved services rather than just a cash handout.",
+    "Universal Bio-Factory": "A theoretical industrial platform capable of printing or growing any biological tissue or organ on demand.",
+    "Universal Quality Floors": "A fairness mechanism that rejects an AI model if its reliability degrades for any specific population segment, even if the aggregate score improves.",
+    "Virtual Cell": "A high-fidelity, atom-by-atom simulation of cellular biology that allows for in-silico drug testing and disease modeling, effectively turning biology into a software problem.",
+    "Zero-Defect Corridor": "A manufacturing guarantee that defects remain below a strict parts-per-million count."
+  },
+  "relationships": {
+    "description": "Explicit edges between framework concepts for graph traversal.",
+    "unlocks": [
+      {
+        "from": "Solved Math",
+        "to": "Solved Physics",
+        "via": "Formal verification enables perfect precision in modeling physical laws"
+      },
+      {
+        "from": "Solved Physics",
+        "to": "Solved Materials Science",
+        "via": "Knowing how atoms behave enables digital alchemy"
+      },
+      {
+        "from": "Solved Materials Science",
+        "to": "Solved Fusion",
+        "via": "Better superconductors enable containment hardware"
+      },
+      {
+        "from": "Solved Materials Science",
+        "to": "Solved Biology",
+        "via": "Understanding matter at atomic level enables Virtual Cell"
+      },
+      {
+        "from": "Solved Biology",
+        "to": "Organ Abundance",
+        "via": "Bio-Fab platforms for manufacturing organs"
+      },
+      {
+        "from": "Solved Biology",
+        "to": "Double Human Healthspan",
+        "via": "Digital twins and rejuvenation protocols"
+      },
+      {
+        "from": "Solved Fusion",
+        "to": "Clean-Energy Abundance",
+        "via": "Infinite carbon-free baseload power"
+      },
+      {
+        "from": "Clean-Energy Abundance",
+        "to": "Space Expansion",
+        "via": "Cheap power enables orbital data centers and propulsion"
+      },
+      {
+        "from": "High-Bandwidth BCI",
+        "to": "Mind Uploading",
+        "via": "Neural read/write capability at sufficient bandwidth"
+      },
+      {
+        "from": "Quantum Computers",
+        "to": "True Nanotechnology",
+        "via": "Simulation of molecular dynamics at quantum scale"
+      },
+      {
+        "from": "Interspecies Communication",
+        "to": "Ecosystem Stewardship",
+        "via": "Communication enables consensual uplift"
+      }
+    ],
+    "requires": [
+      {
+        "entity": "Domain Collapse",
+        "requires": "Industrial Intelligence Stack",
+        "reason": "All 9 layers must be present"
+      },
+      {
+        "entity": "Abundance Flywheel",
+        "requires": "Targeting System",
+        "reason": "The flywheel cannot spin without a legible, payable target"
+      },
+      {
+        "entity": "Abundance Flywheel",
+        "requires": "Compute Escrow",
+        "reason": "Pre-committed compute is the initial fuel"
+      },
+      {
+        "entity": "Outcome Procurement",
+        "requires": "Targeting System",
+        "reason": "Cannot pay for outcomes without measuring them"
+      },
+      {
+        "entity": "Outcome Procurement",
+        "requires": "Decision Records (DR-AIS)",
+        "reason": "Trust requires auditability"
+      },
+      {
+        "entity": "Action Networks",
+        "requires": "Actuation layer of Industrial Intelligence Stack"
+      },
+      {
+        "entity": "Data Trusts",
+        "requires": "Observability layer of Industrial Intelligence Stack"
+      },
+      {
+        "entity": "Blinded Clears",
+        "requires": "Hidden Test Sets"
+      }
+    ],
+    "counters": [
+      {
+        "threat": "Spec Capture",
+        "counter": "Rotating independent stewards + Purpose→Task→Metric maps"
+      },
+      {
+        "threat": "Data Leakage",
+        "counter": "Rolling cryptographically-committed holdouts"
+      },
+      {
+        "threat": "Monoculture",
+        "counter": "Multi-compiler / multi-toolchain rules + Two-Source Rule"
+      },
+      {
+        "threat": "Performance Drift",
+        "counter": "Universal Quality Floors + automatic throttling"
+      },
+      {
+        "threat": "Outcome Gaming",
+        "counter": "Verify source of problem, not just the solution"
+      },
+      {
+        "threat": "The Muddle",
+        "counter": "The Rails (targeting platforms, audit tools, data trusts, compute escrow)"
+      }
+    ],
+    "measured_by": [
+      {
+        "domain": "Education",
+        "metrics": [
+          "LG/H",
+          "Retention Floors"
+        ]
+      },
+      {
+        "domain": "Healthcare",
+        "metrics": [
+          "TTT",
+          "Outcome Uplift",
+          "Biofab SLAs"
+        ]
+      },
+      {
+        "domain": "Manufacturing",
+        "metrics": [
+          "D2P24",
+          "Zero-Defect Corridor",
+          "Sustainability Ledger"
+        ]
+      },
+      {
+        "domain": "Energy",
+        "metrics": [
+          "E2C Index",
+          "LCOE",
+          "Reliability Minutes Avoided"
+        ]
+      },
+      {
+        "domain": "Climate",
+        "metrics": [
+          "CO₂e Ledger"
+        ]
+      },
+      {
+        "domain": "Software",
+        "metrics": [
+          "Spec-to-Artifact Score",
+          "Proof Robustness"
+        ]
+      },
+      {
+        "domain": "Physics",
+        "metrics": [
+          "Predictive Cross-Validation",
+          "Unification Score"
+        ]
+      },
+      {
+        "domain": "Materials Science",
+        "metrics": [
+          "Time-to-Property (TtP)"
+        ]
+      },
+      {
+        "domain": "Biology / Longevity",
+        "metrics": [
+          "LEV Coefficient",
+          "BAV",
+          "Homeostatic Resilience Score",
+          "Genomic Stability Index"
+        ]
+      },
+      {
+        "domain": "National Competitiveness",
+        "metrics": [
+          "ACI",
+          "RoCS"
+        ]
+      },
+      {
+        "domain": "Disaster Prediction",
+        "metrics": [
+          "Actionable Lead Time",
+          "Avoided-Loss Accounting"
+        ]
+      },
+      {
+        "domain": "BCI",
+        "metrics": [
+          "EDR",
+          "Decoupling Factor"
+        ]
+      },
+      {
+        "domain": "Nanotechnology",
+        "metrics": [
+          "Defect Density",
+          "TtP"
+        ]
+      },
+      {
+        "domain": "Space Expansion",
+        "metrics": [
+          "Import-Dependence Ratio",
+          "Energy Autonomy",
+          "Human Population Off-Earth"
+        ]
+      },
+      {
+        "domain": "Quantum Computing",
+        "metrics": [
+          "Logical Qubit Count",
+          "Quantum Supremacy in Training"
+        ]
+      },
+      {
+        "domain": "Ecology",
+        "metrics": [
+          "Predation Index",
+          "Preservation Fidelity"
+        ]
+      },
+      {
+        "domain": "Fusion",
+        "metrics": [
+          "Q-Factor"
+        ]
+      }
+    ]
+  },
+  "companion": {
+    "how_to_use": {
+      "for_agents": "Parse the top-level JSON sections for structured data — the glossary, maturation levels, moonshots, relationship graph, and stakeholder playbooks are all machine-traversable. Use the companion.chapter_summaries for narrative context that explains the 'why' behind the structures.",
+      "for_humans": "Read the chapter_summaries to get the thesis in condensed form. Use the glossary as a reference dictionary. Use the relationships section to understand dependencies between domains.",
+      "apply_to_your_domain": [
+        "Learn the vocabulary — Load 'glossary'.",
+        "Assess your domain's maturity — Use 'maturation_curve' (L0-L5) to determine where you stand.",
+        "Audit your stack — Walk through each of the 9 layers of 'industrial_intelligence_stack'. Which layers are missing?",
+        "Ask the three diagnostic questions — See 'diagnostic_questions'. Do you have Instrumented Legibility, Harness Integrity, and Institutional Buy-in?",
+        "Identify your conversions — Check which of the 'seven_great_conversions' your domain has (or hasn't) undergone.",
+        "Find your moonshot — Browse 'moonshots' for relevant benchmarks, milestones, and guardrails.",
+        "Check the dependency graph — Use 'relationships.unlocks' and 'relationships.requires' to understand what must be solved first.",
+        "Read your playbook — Find your role in 'stakeholder_playbooks'.",
+        "Watch for failure modes — Review 'failure_modes' and their counter-designs.",
+        "Measure with the right metrics — Use 'relationships.measured_by' to find the metrics that apply to your domain."
+      ]
+    },
+    "chapter_summaries": {
+      "prologue": {
+        "title": "Prologue: Three Futures",
+        "summary": "The document opens by dropping the reader into three vivid scenarios — 2026, 2030, and 2035 — written in the specific vocabulary the rest of the essay will define. The purpose is visceral: feel the speed of the exponential curve before we explain the mechanics. In 2026 (The Lock-In), intelligence has become a programmable utility. RoCS replaces EBITDA. Solved Math turns formal verification into a commodity. In 2030 (The Liquefaction), the physical world becomes programmable. Time-to-Property compresses from decades to days. Biology is now a software problem. In 2035 (The Quiet Hum), systems simply work. Longevity Escape Velocity has been breached. Universal Basic Capability guarantees every citizen the best AI tutor, doctor, and lawyer at zero marginal cost."
+      },
+      "chapter_1": {
+        "title": "Chapter 1: The War on Scarcity",
+        "summary": "Every civilizational step-change broke a single bottleneck: Ignorance (Scientific Revolution), Muscle (Industrial Revolution), Distance (Digital Revolution), and now Attention — scarce expert cognition (Intelligence Revolution). Each revolution follows the same four-stage pattern: Legibility, Harness, Institutions, Abundance. The weapon of the Intelligence Revolution is The Token: artificial cognition that turns intelligence into a cheap utility. The locus of prestige always shifts from the 'Hero' (lone genius) to the 'Harness Builder' (the industrialist who builds the system). Three diagnostic questions test whether a revolution is real in any domain: Is the problem measured? Does the harness survive attack? Are buyers paying for outcomes?"
+      },
+      "chapter_2": {
+        "title": "Chapter 2: The Thesis",
+        "summary": "Three foundational claims: (1) Cognition is a Commodity — model quality, collapsing unit costs, and falling integration friction converge to make super-human thought cheap. The bottleneck shifts to routing. (2) Targeting Systems Industrialize Progress — when you make measurement legible, adversarial, and payable, capital and research flood in. (3) The Shaped-Charge Model — ASI must be focused through Moonshots that are Positive-Sum, Auditable, and Composable. The enemy is 'The Muddle' — bureaucracy, input-based pricing, and scarcity-minded institutions. 'Solved' is defined precisely: a domain where the bottleneck has shifted from human genius to available computing power."
+      },
+      "chapter_3": {
+        "title": "Chapter 3: The Mechanics",
+        "summary": "Introduces the Industrial Intelligence Stack — 9 layers required to turn a craft into an industry. Any missing layer causes failure. Defines the L0-L5 Maturation Curve: from the ill-posed Muddle (L0) through measurable, repeatable, automated, and industrialized stages to the fully commoditized 'Solved' state (L5). Describes the Seven Great Conversions that signal a domain has tipped. Demonstrates the fractal dependency chain: Solved Math -> Solved Physics -> Solved Materials -> Solved Fusion."
+      },
+      "chapter_4": {
+        "title": "Chapter 4: The Lock-In",
+        "summary": "Intelligence has shifted from craft to utility; the constraint is how fast institutions can route that cognition. Four interdependent trends have reached critical velocity. The AlphaFold 3 precedent is presented as the universal template for Domain Collapse. Seven convergences are driving the inflection simultaneously. The Regulatory Foundry Window (~18 months) is the period where path dependencies harden. Three scenarios: The Bright Path (abundance), The Muddle Path (stagnation), The Dark Path (freeze after a safety incident)."
+      },
+      "chapter_5": {
+        "title": "Chapter 5: The Mobilization",
+        "summary": "Maps the Solution Wavefront — the sequence in which fields get solved. Phase 1 (2026-27): pure information (math, CS, physics). Phase 2 (2028-31): physical world (chemistry, materials, biology). Phase 3 (2032-35): planetary systems (energy, climate, infrastructure, space). Before any of this can happen, the 'Messy Middle' infrastructure must be built: Targeting Authorities, Data Trusts and Action Networks, and Energy-to-Compute capacity. The operational playbook: publish targets then budgets, stand up action networks, escrow compute, procure outcomes, instrument for trust."
+      },
+      "chapter_6": {
+        "title": "Chapter 6: The Engine",
+        "summary": "Benchmarks are not scoreboards — they are Targeting Systems: active guidance mechanisms that are prospective, blinded, adversarial, auditable, equity-constrained, and continuous. The Abundance Flywheel: Commitment -> Focus -> Domain Collapse -> Surplus Capture -> Reinvestment. Three non-negotiable design principles for targeting systems. Case patterns show the flywheel in action: AlphaFold, AI tutoring, dispatcher agents, TtP. Defines the 5 Institutional Primitives and the new Economic Dashboard. Closes with failure modes and their programmatic counter-designs."
+      },
+      "chapter_7": {
+        "title": "Chapter 7: The Moonshots",
+        "summary": "Fifteen specific missions in four parts. Human Needs: Organ Abundance, Double Human Healthspan, End Hunger, AI-Empowered Education. Frontier of Mind: High-Bandwidth BCI, Mind Uploading, Interspecies Communication, Understanding Consciousness. Planetary Substrate: Disaster Prediction, Ecosystem Stewardship, Clean-Energy Abundance. Frontier of Physics & Expansion: Quantum Computers, True Nanotechnology, Space Expansion, Solve Fundamental Physics. Each moonshot is structured identically: Mission, How AI Solves the Domain, Spillover, Benchmarks, Milestones, Guardrails. The prize is just the first, hardest target. Achieving it means the engine is complete."
+      },
+      "chapter_8": {
+        "title": "Chapter 8: The Muddle vs. The Machine",
+        "summary": "What happens after we win? GDP becomes obsolete. The replacement is the Abundance Capability Index (ACI). Three new human archetypes emerge: Explorer of Purpose, Ethical Anchor, Creator of Meaning. Status shifts from headcount to Compute-Count. The New Abundance Contract has three pillars: Floors (Universal Basic Capability), Freedom (Compute Wallets), Feedback (Fairness Dashboards). Monopoly risk is countered by Open Rails, the Two-Source Rule, and Data Fiduciaries. The safety framework rests on Attraction, transparency, humility, Red-Team Endowments, and Circuit Breakers. Geopolitically, Compute is the new Steel and Energy is the new Land."
+      },
+      "chapter_9": {
+        "title": "Chapter 9: Build the Rails",
+        "summary": "Distills the entire argument into Ten Gears of the abundance engine. Provides role-specific 90-day / 6-month / 1-year action plans for National Leaders, Mayors, Health System Operators, Infrastructure Operators, Industrial Leaders, Investors, and Citizens. Lists what must be stopped. Answers the cost objection: this requires reallocating existing waste, not printing new money (1% of national budgets, 10% of city capital budgets, 50% of philanthropy spending)."
+      },
+      "epilogue": {
+        "title": "Epilogue: The Quiet Hum",
+        "summary": "When the rails are in place, progress snaps from rhetoric to routine. The scarce resource becomes Aiming — choosing purposes worthy of the new power. The essay was not a forecast; it was a field manual. Build the rails. Aim the charge."
+      }
+    },
+    "patterns_and_antipatterns": [
+      {
+        "pattern": "Pay for verified outcomes",
+        "antipattern": "Pay for hours, effort, reports"
+      },
+      {
+        "pattern": "Build the test harness first",
+        "antipattern": "Build the agent, then figure out testing"
+      },
+      {
+        "pattern": "Publish targets, then budgets",
+        "antipattern": "Write vague checks, fund proposals"
+      },
+      {
+        "pattern": "Automate evaluation before work",
+        "antipattern": "Automate the work, then evaluate"
+      },
+      {
+        "pattern": "Treat compute as working capital",
+        "antipattern": "Treat compute as an IT expense"
+      },
+      {
+        "pattern": "Celebrate harness builders",
+        "antipattern": "Celebrate heroic crisis-fixers"
+      },
+      {
+        "pattern": "Compete on Pareto Frontiers",
+        "antipattern": "Optimize a single metric"
+      },
+      {
+        "pattern": "Engineer epistemic humility",
+        "antipattern": "Let AI hallucinate confidently"
+      },
+      {
+        "pattern": "Use multi-vendor / multi-stack",
+        "antipattern": "Depend on a single model/vendor"
+      },
+      {
+        "pattern": "Measure real-world outcomes",
+        "antipattern": "Measure proxies and activity"
+      },
+      {
+        "pattern": "Rotate test stewards and hidden sets",
+        "antipattern": "Use static benchmarks"
+      },
+      {
+        "pattern": "Distribute capacity (UBC)",
+        "antipattern": "Distribute only cash (UBI)"
+      },
+      {
+        "pattern": "Regulate by automated oversight",
+        "antipattern": "Regulate by prior permission"
+      },
+      {
+        "pattern": "Export standards (Standards Diplomacy)",
+        "antipattern": "Hoard technology (Secrecy)"
+      },
+      {
+        "pattern": "Fund Red-Team Endowments",
+        "antipattern": "Treat safety as an afterthought"
+      },
+      {
+        "pattern": "Tie executive comp to outcome clears",
+        "antipattern": "Tie executive comp to slideware"
+      }
+    ],
+    "json_cross_reference": {
+      "Term definitions": "glossary",
+      "Stack layers to audit": "industrial_intelligence_stack.layers",
+      "Where your domain sits": "maturation_curve.levels",
+      "Domain dependency order": "solution_wavefront and relationships.unlocks",
+      "Specific mission details": "moonshots[n]",
+      "How the flywheel works": "abundance_flywheel",
+      "What to measure": "relationships.measured_by",
+      "What can go wrong": "failure_modes",
+      "What counters each threat": "relationships.counters",
+      "Your role's action items": "stakeholder_playbooks",
+      "Targeting system design rules": "targeting_system_design_principles",
+      "The 10 decisions that matter": "ten_gears",
+      "New economic metrics": "economic_dashboard",
+      "Safety framework": "safety_framework",
+      "Social contract design": "new_abundance_contract",
+      "Geopolitical strategy": "geopolitics",
+      "New human roles": "new_roles",
+      "Historical revolution pattern": "revolution_pattern",
+      "Diagnostic checklist": "diagnostic_questions",
+      "The 7 signs of domain tipping": "seven_great_conversions",
+      "The 7 convergences driving the shift": "convergences",
+      "Three possible futures": "scenarios"
+    }
+  }
+}
