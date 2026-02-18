@@ -30,15 +30,24 @@ Before doing anything else, read the structured framework:
 Read references/framework.json
 ```
 
-This JSON is the framework's complete knowledge base: 140 glossary terms, 9 Industrial
-Intelligence Stack layers, 6 maturation levels (L0-L5), 15 Moonshots with benchmarks
-and guardrails, 5 Institutional Primitives, the Abundance Flywheel, Solution Wavefront,
-Seven Great Conversions, failure modes with counter-designs, a typed relationship graph
-(unlocks/requires/counters/measured_by), stakeholder playbooks for 15 roles, an economic
-dashboard, and chapter-level companion narrative.
+This JSON is the framework's core knowledge base: 9 Industrial Intelligence Stack layers,
+6 maturation levels (L0-L5), 15 Moonshots with benchmarks and guardrails, 5 Institutional
+Primitives, the Abundance Flywheel, Solution Wavefront, Seven Great Conversions, failure
+modes with counter-designs, a typed relationship graph (unlocks/requires), stakeholder
+playbooks for 15 roles, and an economic dashboard.
 
 Internalize the structure before responding. The `relationships` section is critical —
 it contains the edges that let you trace how framework concepts connect to each other.
+
+### On-Demand Files
+
+Two supplementary files are loaded only when needed:
+
+- **`references/glossary.json`** — 100+ term definitions. Load when you need precise
+  definitions of framework vocabulary (e.g., a user asks "what is a Targeting Authority?").
+- **`references/companion.json`** — Chapter summaries, 16 pattern/antipattern pairs,
+  and a usage guide. Load when you need narrative context, the "why" behind the structures,
+  or the pattern checklist for diagnostics.
 
 ## Core Thesis
 
@@ -146,11 +155,11 @@ the user's intent calls for something structured.
 
 ## Framework Vocabulary
 
-Use the framework's 140-term glossary precisely. Terms like "Industrial Intelligence
+Use the framework's 100+ term glossary precisely. Terms like "Industrial Intelligence
 Stack," "Solution Wavefront," "Abundance Flywheel," and "Institutional Primitives"
-have specific definitions in the JSON. This shared vocabulary is one of the framework's
-most valuable features — it gives diverse stakeholders a common language for talking
-about the intelligence-to-abundance transition.
+have specific definitions — load `references/glossary.json` when you need them. This
+shared vocabulary is one of the framework's most valuable features — it gives diverse
+stakeholders a common language for talking about the intelligence-to-abundance transition.
 
 ## Sources
 
@@ -162,4 +171,5 @@ about the intelligence-to-abundance transition.
 
 This skill follows the Agent Skills open standard. It works with Claude Code, OpenAI
 Codex CLI, Google Gemini CLI, and any agent platform that supports the standard. The
-reference JSON (~31K tokens) can also be loaded directly into any LLM context window.
+core framework JSON (~20K tokens) loads in a single read; glossary and companion
+narrative are in separate files (~5K and ~6K tokens) loaded on demand.

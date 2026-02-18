@@ -1,0 +1,88 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "meta": {
+    "title": "Solve Everything — Companion Narrative",
+    "description": "Chapter summaries, patterns/antipatterns, and usage guide for the Solve Everything framework. Load on demand for narrative context.",
+    "source": "framework.json",
+    "version": "1.0.1"
+  },
+  "how_to_use": {
+    "for_agents": "Parse the top-level JSON sections in framework.json for structured data — the maturation levels, moonshots, relationship graph, and stakeholder playbooks are all machine-traversable. Use chapter_summaries for narrative context that explains the 'why' behind the structures. Load glossary.json for term definitions.",
+    "for_humans": "Read the chapter_summaries to get the thesis in condensed form. Load glossary.json as a reference dictionary. Use the relationships section in framework.json to understand dependencies between domains.",
+    "apply_to_your_domain": [
+      "Assess your domain's maturity — Use 'maturation_curve' (L0-L5) to determine where you stand.",
+      "Audit your stack — Walk through each of the 9 layers of 'industrial_intelligence_stack'. Which layers are missing?",
+      "Ask the three diagnostic questions — See 'diagnostic_questions'. Do you have Instrumented Legibility, Harness Integrity, and Institutional Buy-in?",
+      "Identify your conversions — Check which of the 'seven_great_conversions' your domain has (or hasn't) undergone.",
+      "Find your moonshot — Browse 'moonshots' for relevant benchmarks, milestones, and guardrails.",
+      "Check the dependency graph — Use 'relationships.unlocks' and 'relationships.requires' to understand what must be solved first.",
+      "Read your playbook — Find your role in 'stakeholder_playbooks'.",
+      "Watch for failure modes — Review 'failure_modes' and their counter-designs.",
+      "Measure with the right metrics — Use 'economic_dashboard' and moonshot benchmarks to find the metrics that apply to your domain."
+    ]
+  },
+  "chapter_summaries": {
+    "prologue": {
+      "title": "Prologue: Three Futures",
+      "summary": "The document opens by dropping the reader into three vivid scenarios — 2026, 2030, and 2035 — written in the specific vocabulary the rest of the essay will define. The purpose is visceral: feel the speed of the exponential curve before we explain the mechanics. In 2026 (The Lock-In), intelligence has become a programmable utility. RoCS replaces EBITDA. Solved Math turns formal verification into a commodity. In 2030 (The Liquefaction), the physical world becomes programmable. Time-to-Property compresses from decades to days. Biology is now a software problem. In 2035 (The Quiet Hum), systems simply work. Longevity Escape Velocity has been breached. Universal Basic Capability guarantees every citizen the best AI tutor, doctor, and lawyer at zero marginal cost."
+    },
+    "chapter_1": {
+      "title": "Chapter 1: The War on Scarcity",
+      "summary": "Every civilizational step-change broke a single bottleneck: Ignorance (Scientific Revolution), Muscle (Industrial Revolution), Distance (Digital Revolution), and now Attention — scarce expert cognition (Intelligence Revolution). Each revolution follows the same four-stage pattern: Legibility, Harness, Institutions, Abundance. The weapon of the Intelligence Revolution is The Token: artificial cognition that turns intelligence into a cheap utility. The locus of prestige always shifts from the 'Hero' (lone genius) to the 'Harness Builder' (the industrialist who builds the system). Three diagnostic questions test whether a revolution is real in any domain: Is the problem measured? Does the harness survive attack? Are buyers paying for outcomes?"
+    },
+    "chapter_2": {
+      "title": "Chapter 2: The Thesis",
+      "summary": "Three foundational claims: (1) Cognition is a Commodity — model quality, collapsing unit costs, and falling integration friction converge to make super-human thought cheap. The bottleneck shifts to routing. (2) Targeting Systems Industrialize Progress — when you make measurement legible, adversarial, and payable, capital and research flood in. (3) The Shaped-Charge Model — ASI must be focused through Moonshots that are Positive-Sum, Auditable, and Composable. The enemy is 'The Muddle' — bureaucracy, input-based pricing, and scarcity-minded institutions. 'Solved' is defined precisely: a domain where the bottleneck has shifted from human genius to available computing power."
+    },
+    "chapter_3": {
+      "title": "Chapter 3: The Mechanics",
+      "summary": "Introduces the Industrial Intelligence Stack — 9 layers required to turn a craft into an industry. Any missing layer causes failure. Defines the L0-L5 Maturation Curve: from the ill-posed Muddle (L0) through measurable, repeatable, automated, and industrialized stages to the fully commoditized 'Solved' state (L5). Describes the Seven Great Conversions that signal a domain has tipped. Demonstrates the fractal dependency chain: Solved Math -> Solved Physics -> Solved Materials -> Solved Fusion."
+    },
+    "chapter_4": {
+      "title": "Chapter 4: The Lock-In",
+      "summary": "Intelligence has shifted from craft to utility; the constraint is how fast institutions can route that cognition. Four interdependent trends have reached critical velocity. The AlphaFold 3 precedent is presented as the universal template for Domain Collapse. Seven convergences are driving the inflection simultaneously. The Regulatory Foundry Window (~18 months) is the period where path dependencies harden. Three scenarios: The Bright Path (abundance), The Muddle Path (stagnation), The Dark Path (freeze after a safety incident)."
+    },
+    "chapter_5": {
+      "title": "Chapter 5: The Mobilization",
+      "summary": "Maps the Solution Wavefront — the sequence in which fields get solved. Phase 1 (2026-27): pure information (math, CS, physics). Phase 2 (2028-31): physical world (chemistry, materials, biology). Phase 3 (2032-35): planetary systems (energy, climate, infrastructure, space). Before any of this can happen, the 'Messy Middle' infrastructure must be built: Targeting Authorities, Data Trusts and Action Networks, and Energy-to-Compute capacity. The operational playbook: publish targets then budgets, stand up action networks, escrow compute, procure outcomes, instrument for trust."
+    },
+    "chapter_6": {
+      "title": "Chapter 6: The Engine",
+      "summary": "Benchmarks are not scoreboards — they are Targeting Systems: active guidance mechanisms that are prospective, blinded, adversarial, auditable, equity-constrained, and continuous. The Abundance Flywheel: Commitment -> Focus -> Domain Collapse -> Surplus Capture -> Reinvestment. Three non-negotiable design principles for targeting systems. Case patterns show the flywheel in action: AlphaFold, AI tutoring, dispatcher agents, TtP. Defines the 5 Institutional Primitives and the new Economic Dashboard. Closes with failure modes and their programmatic counter-designs."
+    },
+    "chapter_7": {
+      "title": "Chapter 7: The Moonshots",
+      "summary": "Fifteen specific missions in four parts. Human Needs: Organ Abundance, Double Human Healthspan, End Hunger, AI-Empowered Education. Frontier of Mind: High-Bandwidth BCI, Mind Uploading, Interspecies Communication, Understanding Consciousness. Planetary Substrate: Disaster Prediction, Ecosystem Stewardship, Clean-Energy Abundance. Frontier of Physics & Expansion: Quantum Computers, True Nanotechnology, Space Expansion, Solve Fundamental Physics. Each moonshot is structured identically: Mission, How AI Solves the Domain, Spillover, Benchmarks, Milestones, Guardrails. The prize is just the first, hardest target. Achieving it means the engine is complete."
+    },
+    "chapter_8": {
+      "title": "Chapter 8: The Muddle vs. The Machine",
+      "summary": "What happens after we win? GDP becomes obsolete. The replacement is the Abundance Capability Index (ACI). Three new human archetypes emerge: Explorer of Purpose, Ethical Anchor, Creator of Meaning. Status shifts from headcount to Compute-Count. The New Abundance Contract has three pillars: Floors (Universal Basic Capability), Freedom (Compute Wallets), Feedback (Fairness Dashboards). Monopoly risk is countered by Open Rails, the Two-Source Rule, and Data Fiduciaries. The safety framework rests on Attraction, transparency, humility, Red-Team Endowments, and Circuit Breakers. Geopolitically, Compute is the new Steel and Energy is the new Land."
+    },
+    "chapter_9": {
+      "title": "Chapter 9: Build the Rails",
+      "summary": "Distills the entire argument into Ten Gears of the abundance engine. Provides role-specific 90-day / 6-month / 1-year action plans for National Leaders, Mayors, Health System Operators, Infrastructure Operators, Industrial Leaders, Investors, and Citizens. Lists what must be stopped. Answers the cost objection: this requires reallocating existing waste, not printing new money (1% of national budgets, 10% of city capital budgets, 50% of philanthropy spending)."
+    },
+    "epilogue": {
+      "title": "Epilogue: The Quiet Hum",
+      "summary": "When the rails are in place, progress snaps from rhetoric to routine. The scarce resource becomes Aiming — choosing purposes worthy of the new power. The essay was not a forecast; it was a field manual. Build the rails. Aim the charge."
+    }
+  },
+  "patterns_and_antipatterns": [
+    { "pattern": "Pay for verified outcomes", "antipattern": "Pay for hours, effort, reports" },
+    { "pattern": "Build the test harness first", "antipattern": "Build the agent, then figure out testing" },
+    { "pattern": "Publish targets, then budgets", "antipattern": "Write vague checks, fund proposals" },
+    { "pattern": "Automate evaluation before work", "antipattern": "Automate the work, then evaluate" },
+    { "pattern": "Treat compute as working capital", "antipattern": "Treat compute as an IT expense" },
+    { "pattern": "Celebrate harness builders", "antipattern": "Celebrate heroic crisis-fixers" },
+    { "pattern": "Compete on Pareto Frontiers", "antipattern": "Optimize a single metric" },
+    { "pattern": "Engineer epistemic humility", "antipattern": "Let AI hallucinate confidently" },
+    { "pattern": "Use multi-vendor / multi-stack", "antipattern": "Depend on a single model/vendor" },
+    { "pattern": "Measure real-world outcomes", "antipattern": "Measure proxies and activity" },
+    { "pattern": "Rotate test stewards and hidden sets", "antipattern": "Use static benchmarks" },
+    { "pattern": "Distribute capacity (UBC)", "antipattern": "Distribute only cash (UBI)" },
+    { "pattern": "Regulate by automated oversight", "antipattern": "Regulate by prior permission" },
+    { "pattern": "Export standards (Standards Diplomacy)", "antipattern": "Hoard technology (Secrecy)" },
+    { "pattern": "Fund Red-Team Endowments", "antipattern": "Treat safety as an afterthought" },
+    { "pattern": "Tie executive comp to outcome clears", "antipattern": "Tie executive comp to slideware" }
+  ]
+}
